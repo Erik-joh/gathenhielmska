@@ -1,0 +1,10 @@
+<?php get_header(); ?>
+
+<div class="row mt-5">
+    <div class="col-md-8 mt-5">
+        <h1>404 - Not Found</h1>
+        <p>You're lost and confused. This page doesn't exist. Perhaps you want to <a href="<?php bloginfo('url'); ?>">visit our startpage</a>?</p>
+    </div><!-- /col -->
+</div><!-- /row -->
+
+<?php get_footer(); ?>
