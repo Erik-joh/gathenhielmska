@@ -30,6 +30,7 @@
                         </li><!-- /nav-item -->
                     <?php endforeach; ?>
                 </ul><!-- /navbar -->
-            </div><!-- /collapse -->
+            </div><!-- /collapseasdfadsf -->
         </nav>
+
     </header>
