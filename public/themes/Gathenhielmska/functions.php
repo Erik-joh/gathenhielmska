@@ -8,6 +8,7 @@ require get_theme_file_path('includes/plugins/plate.php');
 require __DIR__ . '/plate.php';
 
 require get_template_directory() . '/post-types/event.php';
+require get_template_directory().'/fields/event.php';
 
 // Set theme defaults.
 add_action('after_setup_theme', function () {
