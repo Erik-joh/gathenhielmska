@@ -1,3 +1,16 @@
 /* WordPlate */
+
 @import 'front-page.scss';
+
+
+
+@import './components/variables.scss';
+@import './pages/events.scss';
+
+
+// *, *::before, *::after {
+//   padding: 0;
+//   margin: 0;
+//   box-sizing: border-box;
+// }
 
