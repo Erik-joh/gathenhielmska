@@ -1,51 +1,27 @@
 <?php get_header(); ?>
+<main class="front-page">
+    <?php
+    $args = [
+        'numberposts' => 4,
+        'orderby' => 'date',
+        'post_type' => 'news'
+    ];
+    $latestPosts = get_posts($args);
+    ?>
+    <div class="news-container">
+        <h1>Nyheter</h1>
+        <?php foreach ($latestPosts as $post) : setup_postdata($post);  ?>
 
-<div class="row mt-5">
-    <div class="col">
+            <div class="news-article">
+                <div class="news-article-top">
+                    <h2 class="news-title"><?php the_title(); ?></h2>
+                    <button class="news-arrow"></button>
+                </div>
+                <p class="news-content"><?php the_content(); ?></p>
+            </div>
 
-        <?php if (have_posts()) : ?>
+        <?php endforeach; ?>
+    </div><!-- /row -->
 
-            <?php while (have_posts()) : the_post(); ?>
-
-                <?php the_content(); ?>
-
-            <?php endwhile; ?>
-
-        <?php endif; ?>
-
-    </div><!-- /col -->
-</div><!-- /row -->
-
-<?php
-$args = [
-    'numberposts' => 2,
-    'order' => 'desc',
-];
-
-$latestPosts = get_posts($args);
-
-?>
-<div class="row mt-5">
-
-    <?php foreach ($latestPosts as $post) : setup_postdata($post);  ?>
-
-        <div class="col-6">
-            <h2>
-                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </h2>
-
-            <?php the_excerpt(); ?>
-        </div>
-
-    <?php endforeach; ?>
-
-
-</div><!-- /row -->
-
-<div class="row mt-2">
-    <div class="col">
-        <?php $blogPageUrl = get_permalink(get_option('page_for_posts')); ?>
-        <a href="<?php echo $blogPageUrl ?>">All posts --></a>
-    </div>
-</div><!-- /row -->
+</main>
 <?php get_footer(); ?>

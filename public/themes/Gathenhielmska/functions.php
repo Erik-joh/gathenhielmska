@@ -8,7 +8,11 @@ require get_theme_file_path('includes/plugins/plate.php');
 require __DIR__ . '/plate.php';
 
 require get_template_directory() . '/post-types/event.php';
+
+require get_template_directory() . '/post-types/news.php';
+
 require get_template_directory().'/fields/event.php';
+
 
 // Set theme defaults.
 add_action('after_setup_theme', function () {
@@ -49,5 +53,5 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap');
     wp_enqueue_style('style', get_stylesheet_directory_uri() . '/assets/styles/app.css');
-    wp_enqueue_script('script', get_template_directory_uri() . '/assets/scripts/app.js');
+    wp_enqueue_script('script', get_template_directory_uri() . '/assets/scripts/app.js', [], false, true);
 });
