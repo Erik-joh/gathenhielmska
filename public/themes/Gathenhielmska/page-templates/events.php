@@ -30,7 +30,12 @@
                         <p class="event-date"><?php the_field('date'); ?></p>
                         <p class="event-title"><?php the_title(); ?></p>
                         <p class="event-info"><?php the_field('description'); ?></p>
-                        <p><?php the_field('category'); ?></p>
+
+                        <?php $categories = get_the_terms($post, 'category')  ?>
+                        <?php foreach ($categories as $category) : ?>
+                            <a href="<?php echo get_term_link($category); ?>"> <?php echo $category->name ?></a>
+                        <?php endforeach; ?>
+
                     </div>
                 </div>
             </a>
