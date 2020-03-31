@@ -21,6 +21,5 @@ add_action('init', function () {
         'menu_position' => 20,
         'public' => true,
         'show_in_rest' => true,
-        'taxonomies' => array( 'category' ),
     ]);
 });
