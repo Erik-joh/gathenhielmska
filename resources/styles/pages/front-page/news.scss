@@ -1,0 +1,39 @@
+.news-container{
+  display: flex;
+  flex-direction: column;
+  background-color: $lightPink;
+
+  .news-article{
+    border-bottom: #BCBCBC solid 1px;
+    margin: 5px;
+    height: 40px;
+    overflow: hidden;
+
+    *{
+      font-size: 16px;
+    }
+    div{
+      display: flex;
+    }
+    .news-title{
+      font-weight: bold;
+      width: 80%;
+      margin-bottom: 20px;
+    }
+    button{
+      height: 10px;
+      width: 10px;
+      background-color: black;
+      border: none;
+    }
+    p{
+
+    }
+  }
+  .news-article-tall{
+    height: 400px;
+  }
+  h1{
+    border-bottom: #BCBCBC solid 1px;
+  }
+}

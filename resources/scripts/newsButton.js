@@ -4,8 +4,16 @@ const NewsButton = () => {
     const newsArrow = newsArticle
       .querySelector(".news-article-top")
       .querySelector(".news-arrow");
+    const originalHeight = newsArticle.clientHeight;
+    let clicked = false;
     newsArrow.addEventListener("click", () => {
-      newsArticle.classList.toggle("news-article-tall");
+      if (clicked) {
+        clicked = false;
+        newsArticle.style.height = `${originalHeight}px`;
+      } else {
+        clicked = true;
+        newsArticle.style.height = `${newsArticle.scrollHeight}px`;
+      }
     });
   });
 };
