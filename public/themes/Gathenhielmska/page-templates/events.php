@@ -30,6 +30,7 @@
                         <p class="event-date"><?php the_field('date'); ?></p>
                         <p class="event-title"><?php the_title(); ?></p>
                         <p class="event-info"><?php the_field('description'); ?></p>
+                        <p><?php the_field('category'); ?></p>
                     </div>
                 </div>
             </a>
