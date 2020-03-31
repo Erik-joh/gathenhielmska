@@ -13,6 +13,8 @@ require get_template_directory() . '/post-types/news.php';
 
 require get_template_directory().'/fields/event.php';
 
+require get_template_directory().'/taxonomies/category.php';
+
 
 // Set theme defaults.
 add_action('after_setup_theme', function () {

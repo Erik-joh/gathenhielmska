@@ -46,8 +46,8 @@ if( function_exists('acf_add_local_field_group') ):
             ),
             array(
                 'key' => 'field_5e83343b5594c',
-                'label' => 'Category',
-                'name' => 'category',
+                'label' => 'test',
+                'name' => 'test',
                 'type' => 'checkbox',
                 'instructions' => '',
                 'required' => 1,
@@ -58,9 +58,9 @@ if( function_exists('acf_add_local_field_group') ):
                     'id' => '',
                 ),
                 'choices' => array(
-                    'Musik' => 'Musik',
-                    'Dans' => 'Dans',
-                    'Konst' => 'Konst',
+                    'Musik' => 'ett',
+                    'Dans' => 'två',
+                    'Konst' => 'tre',
                 ),
                 'allow_custom' => 0,
                 'default_value' => array(

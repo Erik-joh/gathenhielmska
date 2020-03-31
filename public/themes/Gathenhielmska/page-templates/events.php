@@ -1,4 +1,8 @@
-<?php /* Template Name: Events */ ?>
+<?php /* Template Name: Events */
+
+use Symfony\Component\VarDumper\VarDumper;
+
+?>
 
 <?php get_header(); ?>
 
@@ -25,17 +29,13 @@
         <?php foreach ($events as $post): ?>
             <a href="<?php echo get_permalink($post); ?>">
                 <div class="event-cards">
+                <?php if (has_post_thumbnail()) {
+                            the_post_thumbnail('medium');
+                        } ?>
                     <div class="fields">
-                    <?php get_field('event_info'); ?>
                         <p class="event-date"><?php the_field('date'); ?></p>
                         <p class="event-title"><?php the_title(); ?></p>
                         <p class="event-info"><?php the_field('description'); ?></p>
-
-                        <?php $categories = get_the_terms($post, 'category')  ?>
-                        <?php foreach ($categories as $category) : ?>
-                            <a href="<?php echo get_term_link($category); ?>"> <?php echo $category->name ?></a>
-                        <?php endforeach; ?>
-
                     </div>
                 </div>
             </a>
