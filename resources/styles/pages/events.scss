@@ -36,7 +36,7 @@
 
   .event-cards {
     background-color: rgb(255, 255, 255);
-    margin: 5px 5px;
+    margin: 5px 5px 24px 5px;
     min-width: 300px;
     max-width: 300px;
     display: flex;
@@ -77,6 +77,20 @@
 
 // Single-event.php below
 
+.single-event-container {
+  line-height: normal;
+
+  h1 {
+    font-size: 22px;
+  }
+
+  svg {
+    color: $lightPink;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .cat-date-container {
   display: flex;
   justify-content: flex-start;
@@ -92,6 +106,8 @@
   display: flex;
   flex-direction: column;
   background-color: $lightPink;
+  margin: 0;
+  padding: 0;
 
   .btn-container {
     display: flex;
