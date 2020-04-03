@@ -16,10 +16,13 @@ $managers = get_posts($args); ?>
             <h2>Ledningen</h2>
             <?php foreach ($managers as $post) : ?>
                 <div class="managers">
-                    <li><?php the_field('full_name'); ?></li>
-                    <li><?php the_field('role'); ?></li>
-                    <li><?php the_field('email'); ?></li>
-                    <li><?php the_field('phone_number'); ?></li>
+                    <img src="<?php the_field('profile_image'); ?>" alt="">
+                    <ul>
+                        <li><?php the_field('full_name'); ?></li>
+                        <li><?php the_field('role'); ?></li>
+                        <li><?php the_field('email'); ?></li>
+                        <li><?php the_field('phone_number'); ?></li>
+                    </ul>
                 </div>
             <?php endforeach; ?>
         </div>
