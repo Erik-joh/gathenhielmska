@@ -1,5 +1,15 @@
 <?php get_header(); ?>
 
+<?php
+setlocale(LC_TIME,'sv_SE');
+
+$date = get_field('date');
+$date_string = strftime('%A %e %B', strtotime($date));
+
+// $date = DateTime::createFromFormat('Y-m-d', $date_string);
+// $newDateFormat = $date->format('l j F');
+?>
+
 <div class="single-event-container">
     <div class="">
         <?php if (have_posts()) : ?>
@@ -18,10 +28,10 @@
                         <a href="<?php echo get_term_link($category); ?>"> <?php echo strtoupper($category->name) ?></a>
                     <?php endforeach; ?>
                     <p>|</p>
-                    <p class="event-date"><?php the_field('date'); ?></p>
+                    <p class="event-date"><?php echo $date; ?></p>
                 </div>
 
-                <h1><?php the_title(); ?></h1>
+                <h1><?php the_field('title'); ?></h1>
                 <?php the_content(); ?>
             <?php endwhile; ?>
         <?php endif; ?>
@@ -35,10 +45,10 @@
     <div class="event-info-container">
         <h1>Information om evenemanget</h1>
         <ul>
-            <li><p class="event-date"><?php the_field('date'); ?></li>
-            <li><p class="event-date">20:00</li>
-            <li><p class="event-date">Fri entre</li>
-            <li><p class="event-date">Stigbergstorget 7</li>
+            <li><p class="event-date"><?php echo $date_string; ?></li>
+            <li><p class="event-date"><?php the_field('time_event_start'); ?>-<?php the_field('time_event_end'); ?></li>
+            <li><p class="event-date"><?php the_field('ticket_price'); ?></li>
+            <li><p class="event-date"><?php the_field('location') ?></li>
         </ul>
         <div class="btn-container">
             <button>Köp biljett</button>
