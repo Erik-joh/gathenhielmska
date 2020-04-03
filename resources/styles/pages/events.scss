@@ -109,6 +109,15 @@
   margin: 0;
   padding: 0;
 
+  .info-top-img{
+    padding-bottom: 40px;
+    margin-top: -20px;
+  }
+  .info-bottom-img{
+    padding-top: 40px;
+    margin-bottom: -20px
+  }
+
   .btn-container {
     display: flex;
     justify-content: center;

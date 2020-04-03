@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 add_action('init', function () {
-    register_taxonomy('category', ['event'], [
+    register_extended_taxonomy('category', 'event', [
         'hierarchical' => true,
         'labels' => [
             'add_new_item' => __('Add New Category'),
