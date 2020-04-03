@@ -1,8 +1,4 @@
-<?php /* Template Name: events */
-
-use Symfony\Component\VarDumper\VarDumper;
-
-?>
+<?php /* Template Name: Events */ ?>
 
 <?php get_header(); ?>
 

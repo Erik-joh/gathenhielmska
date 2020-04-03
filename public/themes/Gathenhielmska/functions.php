@@ -8,10 +8,11 @@ require get_theme_file_path('includes/plugins/plate.php');
 require __DIR__ . '/plate.php';
 
 require get_template_directory() . '/post-types/event.php';
-
 require get_template_directory() . '/post-types/news.php';
 
 require get_template_directory().'/fields/event.php';
+require get_template_directory().'/fields/front-page.php';
+require get_template_directory().'/fields/contact.php';
 
 require get_template_directory().'/taxonomies/category.php';
 
