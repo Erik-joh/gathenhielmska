@@ -39,9 +39,9 @@
                     </div>
                 <?php endforeach; ?>
             </div>
-            <button>
-                <a href="<?php echo get_permalink(get_page_by_title("events")); ?>">Se fler evengemang</a>
-            </button>
+
+            <a href="<?php echo get_permalink(get_page_by_title("evenemang")); ?>">Se fler evenemang</a>
+
 
         </div>
     <?php endif; ?>
@@ -72,6 +72,22 @@
         <?php endforeach; ?>
         <img class="news-bottom-img" src="<?php bloginfo('template_directory') ?>/assets/images/wave_news_bottom.png" />
     </div><!-- /row -->
+
+
+    <div class="visit-us">
+        <h2>Vill du besöka oss?</h2>
+        <p>Vi på Gathenhielmska huset vill gärna öppna upp för er så mycket som möjligt, vi har guidade turer och flera olika evenemang där vi öppnar dörrarna för er!</p>
+        <br>
+        <p>Håll utkik på kommande evenemang här, på
+            <a> Facebook </a>
+            eller på
+            <a> Instagram </a>
+            för nästa tillfälle.
+        </p>
+        <img class="map" src="<?php bloginfo('template_directory') ?>/assets/images/map.png" />
+        <a class="link-button" href="<?php echo get_permalink(get_page_by_title("evenemang")); ?>">Se evenemang</a>
+    </div>
+
 
 </main>
 <?php get_footer(); ?>
