@@ -1,0 +1,36 @@
+@mixin font-line-height {
+  font-style: normal;
+  line-height: 150%;
+  color: $black;
+}
+//heading
+h1{
+  font-family: $fontHeading;
+  font-size: 26px;
+  @include font-line-height;
+}
+//subheading
+h2{
+  font-family: $fontHeading;
+  font-size: 20px;
+  @include font-line-height;
+}
+//paragraph heading
+h3{
+  font-family: $fontHeading;
+  font-size: 18px;
+  @include font-line-height;
+}
+//paragraph heading smaller
+h4{
+  font-family: $fontHeading;
+  font-size: 16px;
+  @include font-line-height;
+}
+//paragraph
+p{
+  font-family: $fontParagraph;
+  font-size: 16px;
+  font-weight: 400;
+  @include font-line-height;
+}

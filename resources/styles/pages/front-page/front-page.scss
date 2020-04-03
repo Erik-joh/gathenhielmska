@@ -1,4 +1,7 @@
 .front-page{
+  .hero-img{
+    width: 100%;
+  }
   @import "./front-events.scss";
   @import "./news.scss";
 }

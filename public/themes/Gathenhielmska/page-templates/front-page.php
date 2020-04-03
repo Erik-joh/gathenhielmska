@@ -1,5 +1,12 @@
+<?php /* Template Name: Home */ ?>
+
 <?php get_header(); ?>
 <main class="front-page">
+    <?php //$page = acf_get_field_group('group_5e85ba0a2d36e')
+    ?>
+    <img class="hero-img" src="<?php the_field('hero_image') ?>" />
+    <h1><?php the_field('hero_title') ?></h1>
+
     <?php
     //Events Section
     $args = [
@@ -13,7 +20,7 @@
 
     <?php if (count($events)) : ?>
         <div class="front-event-container">
-            <h1>Kommande evengemang</h1>
+            <h2>Kommande evengemang</h2>
 
             <div class="front-event-cards-container">
                 <?php foreach ($events as $post) : ?>
@@ -32,7 +39,10 @@
                     </div>
                 <?php endforeach; ?>
             </div>
-            <a href="<?php echo get_permalink(get_page_by_title("events")); ?>">Se fler evengemang</a>
+            <button>
+                <a href="<?php echo get_permalink(get_page_by_title("events")); ?>">Se fler evengemang</a>
+            </button>
+
         </div>
     <?php endif; ?>
 
@@ -47,12 +57,12 @@
     ?>
     <div class="news-container">
         <img class="news-top-img" src="<?php bloginfo('template_directory') ?>/assets/images/wave_news_top.png" />
-        <h1>Nyheter</h1>
+        <h2>Nyheter</h2>
         <?php foreach ($latestPosts as $post) : setup_postdata($post);  ?>
 
             <div class="news-article">
                 <div class="news-article-top">
-                    <h2 class="news-title"><?php the_title(); ?></h2>
+                    <h4 class="news-title"><?php the_title(); ?></h4>
                     <img class="news-arrow" src="<?php bloginfo('template_directory') ?>/assets/images/news_arrow.png" />
                 </div>
                 <!-- <p class=" news-content"></p> -->
