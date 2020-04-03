@@ -1,5 +1,12 @@
+<?php /* Template Name: Home */ ?>
+
 <?php get_header(); ?>
 <main class="front-page">
+    <?php //$page = acf_get_field_group('group_5e85ba0a2d36e')
+    ?>
+    <img src="<?php the_field('hero_image') ?>" />
+    <h2><?php the_field('hero_title') ?></h2>
+
     <?php
     //Events Section
     $args = [
@@ -32,7 +39,10 @@
                     </div>
                 <?php endforeach; ?>
             </div>
-            <a href="<?php echo get_permalink(get_page_by_title("events")); ?>">Se fler evengemang</a>
+            <button>
+                <a href="<?php echo get_permalink(get_page_by_title("events")); ?>">Se fler evengemang</a>
+            </button>
+
         </div>
     <?php endif; ?>
 
