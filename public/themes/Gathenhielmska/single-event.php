@@ -22,10 +22,10 @@ $date_string = strftime('%A %e %B', strtotime($date));
                 </div>
 
                 <div class="cat-date-container">
-                    <?php $categories = get_the_terms($post, 'category')  ?>
+                    <?php $categories = get_the_terms($post, 'category');  ?>
 
                     <?php foreach ($categories as $category) : ?>
-                        <a href="<?php echo get_term_link($category); ?>"> <?php echo strtoupper($category->name) ?></a>
+                        <a href="<?php echo get_term_link($category) ?>"> <?php echo strtoupper($category->name) ?></a>
                     <?php endforeach; ?>
                     <p>|</p>
                     <p class="event-date"><?php echo $date; ?></p>
@@ -38,11 +38,8 @@ $date_string = strftime('%A %e %B', strtotime($date));
     </div>
 
 <!-- Information Section -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <style> .wave { fill: currentColor; } </style>
-        <path class="wave" fill="#f3f4f5" fill-opacity="1" d="M0,256L80,229.3C160,203,320,149,480,138.7C640,128,800,160,960,144C1120,128,1280,64,1360,32L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-    </svg>
-    <div class="event-info-container">
+<div class="event-info-container">
+    <img class="info-top-img" src="<?php bloginfo('template_directory') ?>/assets/images/wave_news_top.png" />
         <h1>Information om evenemanget</h1>
         <ul>
             <li><p class="event-date"><?php echo $date_string; ?></li>
@@ -53,11 +50,8 @@ $date_string = strftime('%A %e %B', strtotime($date));
         <div class="btn-container">
             <button>Köp biljett</button>
         </div>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <style> .wave { fill: currentColor; } </style>
-        <path class="wave" fill="#f3f4f5" fill-opacity="1" d="M0,256L80,229.3C160,203,320,149,480,138.7C640,128,800,160,960,144C1120,128,1280,64,1360,32L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-    </svg>
+    <img class="info-bottom-img" src="<?php bloginfo('template_directory') ?>/assets/images/wave_news_bottom.png" />
+</div>
 
 <!-- Gallery Section -->
     <div class="gallery-container">
