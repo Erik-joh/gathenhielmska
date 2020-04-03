@@ -9,6 +9,7 @@ require __DIR__ . '/plate.php';
 
 require get_template_directory() . '/post-types/event.php';
 require get_template_directory() . '/post-types/news.php';
+require get_template_directory() . '/post-types/manager.php';
 
 require get_template_directory().'/fields/event.php';
 require get_template_directory().'/fields/front-page.php';
