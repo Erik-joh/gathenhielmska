@@ -7,10 +7,11 @@
     <img class="hero-img" src="<?php the_field('hero_image') ?>" />
     <h1><?php the_field('hero_title') ?></h1>
 
+
     <?php
     //Events Section
     $args = [
-        'numberposts' => 3,
+        'numberposts' => 6,
         'post_type' => 'event',
         'orderby' => 'date'
     ];
@@ -22,9 +23,9 @@
         <div class="front-event-container">
             <h2>Kommande evengemang</h2>
 
-            <div class="front-event-cards-container">
+            <div class="front-event-cards-container" id="scrollX">
                 <?php foreach ($events as $post) : ?>
-                    <div class="front-event-cards">
+                    <div class="front-event-cards scrollable">
                         <?php if (has_post_thumbnail()) {
                             the_post_thumbnail([163, 190]);
                         } ?>
@@ -39,8 +40,9 @@
                     </div>
                 <?php endforeach; ?>
             </div>
+            <div class="scroll-highlight-container"></div>
 
-            <a href="<?php echo get_permalink(get_page_by_title("evenemang")); ?>">Se fler evenemang</a>
+            <a class="link-button" href="<?php echo get_permalink(get_page_by_title("evenemang")); ?>">Se fler evenemang</a>
 
 
         </div>
