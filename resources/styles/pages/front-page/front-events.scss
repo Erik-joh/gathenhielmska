@@ -1,5 +1,14 @@
 .front-event-container{
   margin-bottom: 100px;
+
+  display: flex;
+  flex-direction: column;
+
+  .link-button{
+    @include link-button;
+    width: 162px;
+    align-self: center;
+  }
 }
 .front-event-cards-container{
   display: flex;
@@ -23,6 +32,7 @@
   max-height: 305px;
   background: #FFFFFF;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+
 }
 
 .front-event-date{
@@ -45,4 +55,22 @@
   line-height: 114%;
 
   color: #121212;
+}
+.scroll-highlight-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .scroll-circle{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #8C8C8C;
+    opacity: 0.6;
+    margin: 5px;
+  }
+  .scroll-circle-highlighted{
+    background-color: #8D8D8D;
+    opacity: 1;
+  }
 }
