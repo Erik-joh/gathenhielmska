@@ -29,7 +29,7 @@
             </div>
         <?php endif; ?>
 
-        <div>
+        <div class="bookings-container">
             <div>
                 <h2>Vill du anordna ett event?</h2>
                 <p>Är du intresserad av att arrangera kreativa möten mellan människor som
@@ -39,6 +39,7 @@
 
             <?php if (have_posts()): ?>
                 <?php while (have_posts()): the_post(); ?>
+                    <h3>Intresseanmälan</h3>
                     <div class="contact-container">
                         <?php the_content(); ?>
                     </div>
