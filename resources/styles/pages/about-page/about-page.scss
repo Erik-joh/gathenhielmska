@@ -2,5 +2,11 @@
   .hero-img{
     width: 100%;
   }
+  .hero-title{
+    margin: 20px 20px;
+    color: $darkBlue;
+  }
+  @import './top-paragraphs.scss';
   @import './timeline.scss';
+  @import './occupations.scss';
 }

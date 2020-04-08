@@ -1,0 +1,30 @@
+.occupations-container{
+  margin: 50px 20px;
+  h2{
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  p{
+    margin-bottom: 50px;
+  }
+  .occupation-card{
+    margin: 20px 0px;
+    padding: 20px 0px;
+    background-color: $darkBlue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    *{
+      margin: 0px 20px;
+      color: white;
+    }
+    p{
+      font-size: 12px;
+    }
+    a{
+      font-size: 14px;
+      text-decoration-line: underline;
+      margin-top: 20px;
+    }
+  }
+}

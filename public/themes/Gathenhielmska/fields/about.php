@@ -1,4 +1,5 @@
-<?php if (function_exists('acf_add_local_field_group')) :
+<?php
+if (function_exists('acf_add_local_field_group')) :
 
     acf_add_local_field_group(array(
         'key' => 'group_5e8b1f5d21d2d',
@@ -81,13 +82,13 @@
                 ),
                 'default_value' => 'En grundtanke med verksamheten i Gathenhielmska Huset är att skapa processer som uppmuntrar innovativa möten och samverkan mellan konstnärer, kulturutövare, lokalt näringsliv och besökare. Gathenhielmska Huset skall vara en sammanlänkande plats i området och en arbetsplats och scen för design, dans, opera, musik, teater, konst och litteratur, med mera
 
-Genom att att arrangera föreställningar, visningar, kurser och andra evenemang skapar vi inte bara ett program för att tillgängliggöra huset och dess kulturhistoriska värde men också ett sammanhang för nutidens kulturaktörer. Vi sätter platsen, artister och besökarna i centrum för Stigbergstorgets framtida utveckling. Dessa möten på en sådan unik plats inspirerar till att hitta och tro på nya former och möjligheter för olika typer av samarbeten, vilket gynnar samhället. Därför tror vi att Gathenhielmska Huset kommer att vara ett viktigt kulturellt nav i Göteborg, en plattform som kommer att belysa processer som bidrar till samhällsutveckling och lokal tillväxt. Detta är inte en hypotes utan har redan påverkat områdets utveckling rejält.
+    Genom att att arrangera föreställningar, visningar, kurser och andra evenemang skapar vi inte bara ett program för att tillgängliggöra huset och dess kulturhistoriska värde men också ett sammanhang för nutidens kulturaktörer. Vi sätter platsen, artister och besökarna i centrum för Stigbergstorgets framtida utveckling. Dessa möten på en sådan unik plats inspirerar till att hitta och tro på nya former och möjligheter för olika typer av samarbeten, vilket gynnar samhället. Därför tror vi att Gathenhielmska Huset kommer att vara ett viktigt kulturellt nav i Göteborg, en plattform som kommer att belysa processer som bidrar till samhällsutveckling och lokal tillväxt. Detta är inte en hypotes utan har redan påverkat områdets utveckling rejält.
 
-En metafor för detta arbete är Skeppet. Om Gathenhielmska Huset är ett skepp så är vi på färd - mot hamnar och horisonter, för att skapa utbyten och förbindelser för konst och kultur. Men Gathenhielmska Huset är också en hamn - en sammanlänkande plats och ett nav för det fria kulturlivets utveckling.',
+    En metafor för detta arbete är Skeppet. Om Gathenhielmska Huset är ett skepp så är vi på färd - mot hamnar och horisonter, för att skapa utbyten och förbindelser för konst och kultur. Men Gathenhielmska Huset är också en hamn - en sammanlänkande plats och ett nav för det fria kulturlivets utveckling.',
                 'placeholder' => '',
                 'maxlength' => '',
                 'rows' => 10,
-                'new_lines' => '',
+                'new_lines' => 'br',
             ),
             array(
                 'key' => 'field_5e8b25602b19e',
@@ -123,13 +124,13 @@ En metafor för detta arbete är Skeppet. Om Gathenhielmska Huset är ett ske
                 ),
                 'default_value' => 'Idag är det runt tio aktörer som arbetar regelbundet i huset. Allt från design, teater, musik, och casting, till arkitektur, samtalsterapi och Podcasts.
 
-Vi är måna om att skapa skapa ett hållbart system för samverkan mellan olika aktörer. Vi tror att mångfalden gynnar både de som arbetar i huset och verksamheten i sin helhet. Olikheterna stärker en gemenskap där alla deltar utifrån sina förutsättningar. Varje aktör är en tillgång och en viktig del för helheten. Vi erbjuder en inkluderande och inspirerande miljö där alla är inbjudna att skapa eller ta del av skapandet och öppnar en plats utan begränsningar för mötet mellan historia, människa och konst.
+    Vi är måna om att skapa skapa ett hållbart system för samverkan mellan olika aktörer. Vi tror att mångfalden gynnar både de som arbetar i huset och verksamheten i sin helhet. Olikheterna stärker en gemenskap där alla deltar utifrån sina förutsättningar. Varje aktör är en tillgång och en viktig del för helheten. Vi erbjuder en inkluderande och inspirerande miljö där alla är inbjudna att skapa eller ta del av skapandet och öppnar en plats utan begränsningar för mötet mellan historia, människa och konst.
 
-Vi ser livet i och kring huset som ekosystem, en god grund för en samverkansmodell där vi tillsammans skapar en näringsrik mylla för samskapande, genom att verka för en hållbar och kollektiv gemenskap. Vi tror att en hållbar kollektiv social struktur, där vi stödjer och lär av varandra, är det bästa sättet att skapa ett sammanhang som kan förvalta Gathenhielmska husets värde.',
+    Vi ser livet i och kring huset som ekosystem, en god grund för en samverkansmodell där vi tillsammans skapar en näringsrik mylla för samskapande, genom att verka för en hållbar och kollektiv gemenskap. Vi tror att en hållbar kollektiv social struktur, där vi stödjer och lär av varandra, är det bästa sättet att skapa ett sammanhang som kan förvalta Gathenhielmska husets värde.',
                 'placeholder' => '',
                 'maxlength' => '',
                 'rows' => 10,
-                'new_lines' => '',
+                'new_lines' => 'br',
             ),
             array(
                 'key' => 'field_5e8b272e2b1a0',
@@ -164,13 +165,13 @@ Vi ser livet i och kring huset som ekosystem, en god grund för en samverkansmo
                     'id' => '',
                 ),
                 'default_value' => 'Idag är det runt tio aktörer som arbetar regelbundet i huset. Allt från design, teater, musik, och casting, till arkitektur, samtalsterapi och podcasts.
-Vi är måna om att skapa skapa ett hållbart system för samverkan mellan olika aktörer. Vi tror att mångfalden gynnar både de som arbetar i huset och verksamheten i sin helhet. Olikheterna stärker en gemenskap där alla deltar utifrån sina förutsättningar. Varje aktör är en tillgång och en viktig del för helheten. Vi erbjuder en inkluderande och inspirerande miljö där alla är inbjudna att skapa eller ta del av skapandet och öppnar en plats utan begränsningar för mötet mellan historia, människa och konst.
+    Vi är måna om att skapa skapa ett hållbart system för samverkan mellan olika aktörer. Vi tror att mångfalden gynnar både de som arbetar i huset och verksamheten i sin helhet. Olikheterna stärker en gemenskap där alla deltar utifrån sina förutsättningar. Varje aktör är en tillgång och en viktig del för helheten. Vi erbjuder en inkluderande och inspirerande miljö där alla är inbjudna att skapa eller ta del av skapandet och öppnar en plats utan begränsningar för mötet mellan historia, människa och konst.
 
-Vi ser livet i och kring huset som ekosystem, en god grund för en samverkansmodell där vi tillsammans skapar en näringsrik mylla för samskapande, genom att verka för en hållbar och kollektiv gemenskap. Vi tror att en hållbar kollektiv social struktur, där vi stödjer och lär av varandra, är det bästa sättet att skapa ett sammanhang som kan förvalta Gathenhielmska husets värde.',
+    Vi ser livet i och kring huset som ekosystem, en god grund för en samverkansmodell där vi tillsammans skapar en näringsrik mylla för samskapande, genom att verka för en hållbar och kollektiv gemenskap. Vi tror att en hållbar kollektiv social struktur, där vi stödjer och lär av varandra, är det bästa sättet att skapa ett sammanhang som kan förvalta Gathenhielmska husets värde.',
                 'placeholder' => '',
                 'maxlength' => '',
                 'rows' => 10,
-                'new_lines' => '',
+                'new_lines' => 'br',
             ),
         ),
         'location' => array(

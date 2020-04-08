@@ -4,21 +4,22 @@ function snapScroll() {
   const scrollCircleContainer = document.querySelector(
     ".scroll-highlight-container"
   );
+  if (container) {
+    const scrollablePages = scrollableItems.length / 2;
 
-  const scrollablePages = scrollableItems.length / 2;
+    let scrollLeft = container.scrollLeft;
+    const scrollByAmount = container.scrollWidth / scrollablePages;
 
-  let scrollLeft = container.scrollLeft;
-  const scrollByAmount = container.scrollWidth / scrollablePages;
+    for (let i = 0; i < scrollablePages; i++) {
+      const div = document.createElement("div");
+      div.classList.add("scroll-circle");
 
-  for (let i = 0; i < scrollablePages; i++) {
-    const div = document.createElement("div");
-    div.classList.add("scroll-circle");
-
-    scrollCircleContainer.appendChild(div);
+      scrollCircleContainer.appendChild(div);
+    }
+    const circles = scrollCircleContainer.children;
+    circles[0].classList.add("scroll-circle-highlighted");
+    container.addEventListener("scroll", onScrollFunc);
   }
-  const circles = scrollCircleContainer.children;
-  circles[0].classList.add("scroll-circle-highlighted");
-  container.addEventListener("scroll", onScrollFunc);
 
   function onScrollFunc() {
     let scrollChange = scrollLeft - container.scrollLeft;
