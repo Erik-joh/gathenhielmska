@@ -22,6 +22,9 @@ $events = get_posts($args);
 
 <?php if (count($events)) : ?>
     <div class="event-container">
+        <div>
+            <?php wp_list_categories('feed_type'); ?>
+        </div>
         <?php foreach ($events as $post) : ?>
             <a href="<?php echo get_permalink($post); ?>">
                 <div class="event-cards">
@@ -29,7 +32,14 @@ $events = get_posts($args);
                         the_post_thumbnail('medium');
                     } ?>
                     <div class="fields">
-                        <p class="event-date"><?php the_field('date'); ?></p>
+                        <div class="cat-date-container">
+                            <?php $categories = get_the_terms($post, 'category');  ?>
+                            <?php foreach ($categories as $category) : ?>
+                                <a class="event-date" href="<?php echo get_term_link($category) ?>"> <?php echo strtoupper($category->name) ?></a>
+                            <?php endforeach; ?>
+                            <p>|</p>
+                            <p class="event-date"><?php the_field('date'); ?></p>
+                        </div>
                         <p class="event-title"><?php the_field('title'); ?></p>
                         <p class="event-info"><?php the_field('description'); ?></p>
                     </div>
