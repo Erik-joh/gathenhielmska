@@ -30,13 +30,16 @@
         <?php endif; ?>
 
         <div class="bookings-container">
-    <!-- FUNGERAR INTE -->
-            <div>
-                <h2><?php the_field('title_3'); ?></h2>
-                <p><?php the_field('text_3'); ?></p>
-            </div>
-    <!-- FUNGERAR INTE -->
-
+<!-- FUNGERAR TYP? -->
+            <?php if (have_posts()): ?>
+                <?php while (have_posts()): the_post(); ?>
+                    <div>
+                        <h2><?php the_field('title_3'); ?></h2>
+                        <p><?php the_field('text_3'); ?></p>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+<!-- FUNGERAR TYP? -->
             <h3>Våra lokaler</h3>
             <?php $args = ['post_type' => 'room', 'orderby' => 'date', 'order' => 'ASC'];
             $room = get_posts($args); ?>
