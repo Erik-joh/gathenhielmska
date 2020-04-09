@@ -30,13 +30,32 @@
         <?php endif; ?>
 
         <div class="bookings-container">
-            <div>
-                <h2>Vill du anordna ett event?</h2>
-                <p>Är du intresserad av att arrangera kreativa möten mellan människor som
-                    älskar kultur? I Gathenhielmska huset har du möjlighet att låta din kreativitet
-                    flöda i någon av dess stora salar eller vackra trädgård. Lämna en intresseanmälan nedan!</p>
-            </div>
+<!-- FUNGERAR TYP? -->
+            <?php if (have_posts()): ?>
+                <?php while (have_posts()): the_post(); ?>
+                    <div>
+                        <h2><?php the_field('title_3'); ?></h2>
+                        <p><?php the_field('text_3'); ?></p>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+<!-- FUNGERAR TYP? -->
+            <h3>Våra lokaler</h3>
+            <?php $args = ['post_type' => 'room', 'orderby' => 'date', 'order' => 'ASC'];
+            $room = get_posts($args); ?>
+                <?php if (count($room)) : ?>
+                    <div class="">
+                        <?php foreach ($room as $post) : ?>
+                            <div class="">
+                                <h4><?php the_field('title'); ?></h4>
+                                <p><?php the_field('description'); ?></p>
+                                <small><?php the_field('capacity'); ?></small>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
 
+<!-- Kontaktformulär -->
             <?php if (have_posts()): ?>
                 <?php while (have_posts()): the_post(); ?>
                     <h3>Intresseanmälan</h3>

@@ -12,8 +12,12 @@ require get_template_directory() . '/post-types/news.php';
 require get_template_directory() . '/post-types/manager.php';
 require get_template_directory() . '/post-types/occupation.php';
 require get_template_directory() . '/post-types/timeline-post.php';
+
 require get_template_directory() . '/post-types/manager.php';
 
+
+
+require get_template_directory() . '/post-types/room.php';
 
 
 require get_template_directory() . '/fields/event.php';
@@ -21,8 +25,11 @@ require get_template_directory() . '/fields/front-page.php';
 require get_template_directory() . '/fields/about.php';
 require get_template_directory() . '/fields/occupation.php';
 require get_template_directory() . '/fields/timeline.php';
-require get_template_directory() . '/fields/manager.php';
+
 require get_template_directory() . '/fields/contact.php';
+require get_template_directory() . '/fields/room.php';
+require get_template_directory() . '/fields/manager.php';
+
 
 require get_template_directory() . '/taxonomies/category.php';
 
