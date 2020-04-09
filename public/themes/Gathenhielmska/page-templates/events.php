@@ -35,7 +35,7 @@ $events = get_posts($args);
                         <div class="cat-date-container">
                             <?php $categories = get_the_terms($post, 'category');  ?>
                             <?php foreach ($categories as $category) : ?>
-                                <a class="event-date" href="<?php echo get_term_link($category) ?>"> <?php echo strtoupper($category->name) ?></a>
+                                <p class="event-date"><a href="<?php echo get_term_link($category) ?>"> <?php echo strtoupper($category->name) ?></a></p>
                             <?php endforeach; ?>
                             <p>|</p>
                             <p class="event-date"><?php the_field('date'); ?></p>
