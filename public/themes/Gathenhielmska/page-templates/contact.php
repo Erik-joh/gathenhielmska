@@ -4,11 +4,14 @@
 
     <main class="contact-page">
         <img class="hero-img" src="<?php the_field('hero_image') ?>" />
-        <h1><?php the_title(); ?></h1>
-        <h3><?php the_field('title'); ?></h3>
-        <p><?php the_field('text'); ?></p>
-        <h4><?php the_field('title_2') ?></h4>
-        <p><?php the_field('mail') ?></p>
+
+        <div class="hej">
+            <h1 class="hero-title"><?php the_title(); ?></h1>
+            <h3><?php the_field('title'); ?></h3>
+            <p><?php the_field('text'); ?></p>
+            <h4><?php the_field('title_2') ?></h4>
+            <p><?php the_field('mail') ?></p>
+        </div>
 
     <?php $args = ['post_type' => 'manager'];
     $managers = get_posts($args); ?>
@@ -40,13 +43,13 @@
                 <?php endwhile; ?>
             <?php endif; ?>
 <!-- FUNGERAR TYP? -->
-            <h3>Våra lokaler</h3>
-            <?php $args = ['post_type' => 'room', 'orderby' => 'date', 'order' => 'ASC'];
+<?php $args = ['post_type' => 'room', 'orderby' => 'date', 'order' => 'ASC'];
             $room = get_posts($args); ?>
                 <?php if (count($room)) : ?>
-                    <div class="">
+                    <div class="room-container">
+                        <h3>Våra lokaler</h3>
                         <?php foreach ($room as $post) : ?>
-                            <div class="">
+                            <div class="room">
                                 <h4><?php the_field('title'); ?></h4>
                                 <p><?php the_field('description'); ?></p>
                                 <small><?php the_field('capacity'); ?></small>
@@ -56,10 +59,10 @@
                 <?php endif; ?>
 
 <!-- Kontaktformulär -->
-            <?php if (have_posts()): ?>
-                <?php while (have_posts()): the_post(); ?>
-                    <h3>Intresseanmälan</h3>
-                    <div class="contact-container">
+<?php if (have_posts()): ?>
+    <?php while (have_posts()): the_post(); ?>
+    <div class="contact-container">
+        <h3>Intresseanmälan</h3>
                         <?php the_content(); ?>
                     </div>
                 <?php endwhile; ?>

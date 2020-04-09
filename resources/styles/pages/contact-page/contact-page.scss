@@ -1,3 +1,13 @@
 @import "./managers.scss";
 @import "./bookings.scss";
 
+.contact-page {
+
+  .hej {
+    padding: 0 20px;
+    .hero-title{
+      margin: 20px 0;
+      color: $darkBlue;
+    }
+  }
+}

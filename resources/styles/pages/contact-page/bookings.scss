@@ -1,16 +1,25 @@
 .bookings-container {
   background-color: $darkBlue;
   color: #ffffff;
+  padding: 50px 20px;
+
+  .room-container {
+    padding-top: 30px;
+  }
+
+  .room {
+    padding: 16px 0;
+   }
 }
 
 .contact-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding-top: 48px;
 }
 
 form {
+  margin: 0px !important;
+  padding: 0px !important;
+
   label {
     color: #ffffff;
     font-weight: normal !important;
