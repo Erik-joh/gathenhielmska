@@ -1,64 +1,53 @@
 function snapScroll() {
   const container = document.getElementById("scrollX");
-  const scrollableItems = document.getElementsByClassName("scrollable");
+  const scrollableItems = document.getElementsByClassName("front-event-cards");
   const scrollCircleContainer = document.querySelector(
     ".scroll-highlight-container"
   );
   if (container) {
     const scrollablePages = scrollableItems.length / 2;
 
-    let scrollLeft = container.scrollLeft;
-    const scrollByAmount = container.scrollWidth / scrollablePages;
-
+    let templist = [];
+    let listDivs = [];
+    let circles = [];
     for (let i = 0; i < scrollablePages; i++) {
-      const div = document.createElement("div");
-      div.classList.add("scroll-circle");
-
-      scrollCircleContainer.appendChild(div);
+      let div = document.createElement("div");
+      div.classList.add("scrollable");
+      listDivs.push(div);
+      container.appendChild(div);
+      let circle = document.createElement("div");
+      circle.classList.add("scroll-circle");
+      circles.push(circle);
+      scrollCircleContainer.appendChild(circle);
     }
-    const circles = scrollCircleContainer.children;
-    circles[0].classList.add("scroll-circle-highlighted");
-    container.addEventListener("scroll", onScrollFunc);
-  }
+    for (let i = 0; i < scrollableItems.length; i = i + 2) {
+      templist.push([scrollableItems[i], scrollableItems[i + 1]]);
+    }
+    for (let i = 0; i < listDivs.length; i++) {
+      listDivs[i].appendChild(templist[i][0]);
+      listDivs[i].appendChild(templist[i][1]);
+    }
 
-  function onScrollFunc() {
-    let scrollChange = scrollLeft - container.scrollLeft;
-    console.log(scrollChange);
-    if (scrollChange < 0) {
-      container.scrollTo(container.scrollLeft + scrollByAmount, 0);
-      for (let i = 0; i < circles.length; i++) {
-        if (circles[i].classList.contains("scroll-circle-highlighted")) {
-          if (i !== circles.length - 1) {
-            circles[i].classList.remove("scroll-circle-highlighted");
-            circles[i + 1].classList.add("scroll-circle-highlighted");
-            break;
-          }
-        }
-      }
-    } else {
-      container.scrollTo(container.scrollLeft - scrollByAmount, 0);
-      for (let i = 0; i < circles.length; i++) {
-        if (circles[i].classList.contains("scroll-circle-highlighted")) {
-          if (i !== 0) {
-            circles[i].classList.remove("scroll-circle-highlighted");
-            circles[i - 1].classList.add("scroll-circle-highlighted");
-            break;
-          }
-        }
+    let width = container.scrollWidth / scrollablePages;
+    let scrollLeft = container.scrollLeft;
+    for (let i = 0; i < scrollablePages; i++) {
+      if (width * i - 50 < scrollLeft && width * (i + 1) - 50 > scrollLeft) {
+        circles[i].classList.add("scroll-circle-highlighted");
+      } else {
+        circles[i].classList.remove("scroll-circle-highlighted");
       }
     }
-    scrollLeft = container.scrollLeft;
-
-    container.removeEventListener("scroll", onScrollFunc);
-    container.addEventListener("scroll", noScroll);
-    setTimeout(() => {
-      container.removeEventListener("scroll", noScroll);
-      container.addEventListener("scroll", onScrollFunc);
-    }, 500);
-  }
-
-  function noScroll() {
-    container.scrollTo(scrollLeft, 0);
+    container.addEventListener("scroll", () => {
+      scrollLeft = container.scrollLeft;
+      console.log(scrollLeft);
+      for (let i = 0; i < scrollablePages; i++) {
+        if (width * i - 50 < scrollLeft && width * (i + 1) - 50 > scrollLeft) {
+          circles[i].classList.add("scroll-circle-highlighted");
+        } else {
+          circles[i].classList.remove("scroll-circle-highlighted");
+        }
+      }
+    });
   }
 }
 export default snapScroll;

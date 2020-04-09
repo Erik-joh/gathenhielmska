@@ -25,7 +25,7 @@
 
             <div class="front-event-cards-container" id="scrollX">
                 <?php foreach ($events as $post) : ?>
-                    <div class="front-event-cards scrollable">
+                    <div class="front-event-cards">
                         <?php if (has_post_thumbnail()) {
                             the_post_thumbnail([163, 190]);
                         } ?>
