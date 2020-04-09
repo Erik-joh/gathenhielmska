@@ -40,7 +40,7 @@ $events = get_posts($args);
                             <p>|</p>
                             <p class="event-date"><?php the_field('date'); ?></p>
                         </div>
-                        <p class="event-title"><?php the_field('title'); ?></p>
+                        <p class="event-title"><?php the_title(); ?></p>
                         <p class="event-info"><?php the_field('description'); ?></p>
                     </div>
                 </div>
