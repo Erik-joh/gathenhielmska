@@ -31,8 +31,16 @@ $date_string = strftime('%A %e %B', strtotime($date));
                     <p class="event-date"><?php echo $date; ?></p>
                 </div>
 
-                <h1><?php the_field('title'); ?></h1>
-                <?php the_content(); ?>
+                <h1><?php the_title(); ?></h1>
+                <p><?php the_field('short_description'); ?></p>
+
+                <h2><?php the_field('title_1'); ?></h2>
+                <p><?php the_field('text_1'); ?></p>
+
+                <h2><?php the_field('title_2'); ?></h2>
+                <p><?php the_field('text_2'); ?></p>
+
+
             <?php endwhile; ?>
         <?php endif; ?>
     </div>
@@ -47,6 +55,7 @@ $date_string = strftime('%A %e %B', strtotime($date));
             <li><p class="event-date"><?php the_field('ticket_price'); ?></li>
             <li><p class="event-date"><?php the_field('location') ?></li>
         </ul>
+        <p><?php the_field('optional_info'); ?></p>
         <div class="btn-container">
             <button>Köp biljett</button>
         </div>
