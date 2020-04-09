@@ -1,3 +1,4 @@
+
 .front-event-container{
   margin-bottom: 100px;
 
@@ -14,11 +15,17 @@
   display: flex;
   margin-bottom: 40px;
   margin: 0% 4%;
-  overflow-x: auto;
-  min-height: 400px;
 
-  /* Hide scrollbar for IE and Edge */
-  -ms-overflow-style: none;
+  min-height: 400px;
+  @include snap-scroll-parent;
+
+}
+
+.scrollable{
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+  @include snap-scroll-child;
 }
  /* Hide scrollbar for Chrome, Safari and Opera */
  .front-event-cards-container::-webkit-scrollbar {
@@ -60,6 +67,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
 
   .scroll-circle{
     height: 10px;

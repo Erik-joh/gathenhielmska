@@ -1,5 +1,13 @@
 /* WordPlate */
+*{
+  scrollbar-width: none;
 
+  /* Hide scrollbar for IE and Edge */
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar{
+  display: none;
+}
 @import './components/variables.scss';
 @import './components/mixins.scss';
 @import './components/text.scss';
