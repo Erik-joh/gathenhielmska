@@ -5,12 +5,12 @@
     <main class="contact-page">
         <img class="hero-img" src="<?php the_field('hero_image') ?>" />
 
-        <div class="hej">
+        <div class="contact-information">
             <h1 class="hero-title"><?php the_title(); ?></h1>
             <h3><?php the_field('title'); ?></h3>
             <p><?php the_field('text'); ?></p>
             <h4><?php the_field('title_2') ?></h4>
-            <p><?php the_field('mail') ?></p>
+            <p><a class="contact-underline" href="mailto:<?php the_field('mail'); ?>"><?php the_field('mail'); ?></a></p>
         </div>
 
     <?php $args = ['post_type' => 'manager'];
@@ -22,10 +22,10 @@
                     <div class="managers">
                         <img src="<?php the_field('profile_image'); ?>" alt="">
                         <ul>
-                            <li><?php the_field('full_name'); ?></li>
+                            <li class="name"><?php the_field('full_name'); ?></li>
                             <li><?php the_field('role'); ?></li>
-                            <li><?php the_field('email'); ?></li>
-                            <li><?php the_field('phone_number'); ?></li>
+                            <li><a class="contact-underline" href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a></li>
+                            <li><a class="contact-underline" href="tel:<?php the_field('phone_number'); ?>"><?php the_field('phone_number'); ?></a></li>
                         </ul>
                     </div>
                 <?php endforeach; ?>
