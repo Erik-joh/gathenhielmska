@@ -8,6 +8,11 @@
 ::-webkit-scrollbar{
   display: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 @import './components/variables.scss';
 @import './components/mixins.scss';
 @import './components/text.scss';
