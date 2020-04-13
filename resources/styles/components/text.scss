@@ -8,24 +8,28 @@
 h1{
   font-family: $fontHeading;
   font-size: 26px;
+  font-weight: 700;
   @include font-line-height;
 }
 //subheading
 h2{
   font-family: $fontHeading;
   font-size: 20px;
+  font-weight: 700;
   @include font-line-height;
 }
 //paragraph heading
 h3{
   font-family: $fontHeading;
   font-size: 18px;
+  font-weight: 700;
   @include font-line-height;
 }
 //paragraph heading smaller
 h4{
   font-family: $fontHeading;
   font-size: 16px;
+  font-weight: 700;
   @include font-line-height;
 }
 //paragraph

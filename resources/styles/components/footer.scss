@@ -1,4 +1,13 @@
-footer {
+.footer {
+  background: $darkGreen;
+  color: #ffffff;
+  padding: 24px 20px 44px 20px;
+  height: 628px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   * {
     margin: 0;
     padding: 0;
@@ -7,13 +16,40 @@ footer {
   li {
     font-size: 16px;
     padding: 4px 0;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
   }
 
-  background: $darkGreen;
-  color: #ffffff;
-  padding: 60px 0 70px 0;
+  p {
+    font-size: 14px;
+  }
+
+  .footer-logo {
+    padding-bottom: 16px;
+  }
+}
+
+.to-top {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  h4 {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 6px 0 0;
+  }
+}
+
+.footer-logos {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 48px;
+
+  img {
+    height: 70%;
+  }
 }
