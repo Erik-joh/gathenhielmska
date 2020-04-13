@@ -40,8 +40,7 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => 'På våra sociala medier kan du hitta mer bilder från huset och alla roliga evenemang. Ta del av personliga historier, intervjuer med utövare och kuriosa om huset.
-Låt dig inspireras av historia och nutid på vår Instagram eller Facebook.',
+			'default_value' => 'På våra sociala medier kan du hitta mer bilder från huset och alla roliga evenemang. Ta del av personliga historier, intervjuer med utövare och kuriosa om huset.',
 			'placeholder' => '',
 			'maxlength' => '',
 			'rows' => '',

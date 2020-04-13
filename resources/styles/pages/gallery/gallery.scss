@@ -5,7 +5,23 @@
     color: $darkBlue;
   }
 
+  .gallery-wave {
+    margin-bottom: -20px;
+  }
+
   .information-container {
     background: $lightPink;
+    padding: 70px 20px 0 20px;
+
+    a, a:visited {
+      color: $darkBlue;
+      text-decoration: underline;
+    }
+
+    .illustration-bird-container {
+      display: flex;
+      justify-content: flex-end;
+      padding-bottom: 14px;
+    }
   }
 }
