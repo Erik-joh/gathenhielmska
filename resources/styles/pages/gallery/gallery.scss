@@ -5,6 +5,10 @@
     color: $darkBlue;
   }
 
+  #sb_instagram {
+    padding-bottom: 0px !important;
+  }
+
   .gallery-wave {
     margin-bottom: -20px;
   }
@@ -22,6 +26,10 @@
       display: flex;
       justify-content: flex-end;
       padding-bottom: 14px;
+
+      img {
+        width: 128px;
+      }
     }
   }
 }

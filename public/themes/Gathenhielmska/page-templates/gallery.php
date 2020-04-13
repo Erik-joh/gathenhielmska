@@ -16,7 +16,7 @@
         <p><?php the_field('text'); ?></p>
         <p>Låt dig inspireras av historia och nutid på vår <a href="https://www.instagram.com/gathenhielmska_huset/">Instagram</a> eller <a href="https://www.facebook.com/">Facebook</a>.</p>
         <div class="illustration-bird-container">
-            <img class="illustration-bird" src="<?php bloginfo('template_directory') ?>/assets/images/about-page/illustration_bird.png" alt="An illustration of a bird"/>
+            <img class="illustration-bird" src="<?php bloginfo('template_directory') ?>/assets/images/illustration_bird.png" alt="An illustration of a bird"/>
         </div>
     </div>
 </main>

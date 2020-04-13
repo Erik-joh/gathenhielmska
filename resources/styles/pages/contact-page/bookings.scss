@@ -1,3 +1,16 @@
+.booking-section {
+  .contact-wave {
+    margin-top: -20px;
+    margin-bottom: -20px;
+    overflow: hidden;
+    width: 100vw;
+  }
+  .illustration-flower {
+    width: 116px;
+    float: right;
+  }
+}
+
 .bookings-container {
   background-color: $darkBlue;
   color: #ffffff;
@@ -9,11 +22,45 @@
 
   .room {
     padding: 16px 0;
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      padding-top: 4px;
+      padding-bottom: 8px;
+    }
+
+    .capacity {
+      display: flex;
+      align-items: center;
+
+      img {
+        padding-right: 8px;
+      }
+
+      p {
+        padding: 0;
+        font-size: 14px;
+      }
+    }
    }
 }
 
 .contact-container {
-  padding-top: 48px;
+  padding-top: 32px;
+
+  p {
+    margin: 0;
+    padding-bottom: 48px;
+  }
+
+  h3 {
+    margin: 0;
+    padding-bottom: 12px;
+  }
 }
 
 form {

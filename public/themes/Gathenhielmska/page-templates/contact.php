@@ -32,8 +32,13 @@
             </div>
         <?php endif; ?>
 
+
+
+        <div class="booking-section">
+            <img class="contact-wave" src="<?php bloginfo('template_directory') ?>/assets/images/contact_wave.png" />
+            <img class="illustration-flower" src="<?php bloginfo('template_directory') ?>/assets/images/illustration_flower.png" alt="An illustration of a flower"/>
+
         <div class="bookings-container">
-<!-- FUNGERAR TYP? -->
             <?php if (have_posts()): ?>
                 <?php while (have_posts()): the_post(); ?>
                     <div>
@@ -42,7 +47,6 @@
                     </div>
                 <?php endwhile; ?>
             <?php endif; ?>
-<!-- FUNGERAR TYP? -->
 <?php $args = ['post_type' => 'room', 'orderby' => 'date', 'order' => 'ASC'];
             $room = get_posts($args); ?>
                 <?php if (count($room)) : ?>
@@ -52,21 +56,26 @@
                             <div class="room">
                                 <h4><?php the_field('title'); ?></h4>
                                 <p><?php the_field('description'); ?></p>
-                                <small><?php the_field('capacity'); ?></small>
+                                <div class="capacity">
+                                    <img src="<?php bloginfo('template_directory') ?>/assets/images/room_icon.svg">
+                                    <p><?php the_field('capacity'); ?></p>
+                                </div>
                             </div>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
 
-<!-- Kontaktformulär -->
-<?php if (have_posts()): ?>
-    <?php while (have_posts()): the_post(); ?>
-    <div class="contact-container">
-        <h3>Intresseanmälan</h3>
-                        <?php the_content(); ?>
-                    </div>
-                <?php endwhile; ?>
-            <?php endif; ?>
+                <!-- Kontaktformulär -->
+                <?php if (have_posts()): ?>
+                    <?php while (have_posts()): the_post(); ?>
+                    <div class="contact-container">
+                    <p><?php the_field('text_4'); ?></p>
+                        <h3>Intresseanmälan</h3>
+                                        <?php the_content(); ?>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                        </div>
         </div>
     </main>
 
