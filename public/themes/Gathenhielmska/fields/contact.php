@@ -146,6 +146,25 @@ if( function_exists('acf_add_local_field_group') ):
                 'rows' => '',
                 'new_lines' => 'wpautop',
             ),
+            array(
+                'key' => 'field_5e9463719d6b6',
+                'label' => 'Text 4',
+                'name' => 'text_4',
+                'type' => 'textarea',
+                'instructions' => 'Write a text.',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => 'I hyra ingår tillgång till lokal, kök, bord och stolar. Beroende på hyresnivå ingår även hjälp med iordningställande och teknisk utrustning.',
+                'placeholder' => '',
+                'maxlength' => '',
+                'rows' => '',
+                'new_lines' => 'br',
+            ),
         ),
         'location' => array(
             array(
