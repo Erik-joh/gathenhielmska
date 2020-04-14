@@ -4,6 +4,9 @@
 $terms = get_terms('category');
 
 $id = get_queried_object()->term_id;
+$name = get_queried_object()->name;
+
+// var_dump($name);
 
 $terms_query = new WP_Query(array(
     'post_type' => 'event',
@@ -17,10 +20,14 @@ $terms_query = new WP_Query(array(
     )
 ));
 
-foreach ($terms as $category) {
-    var_dump($category->name);
-}
-?>
+// var_dump($id);
+
+// foreach ($terms as $category) {
+//     var_dump($category->name);
+// }
+// ?>
+
+<h1><?php echo $name; ?></h1>
 
 <?php if ($terms_query->have_posts()) : ?>
     <?php while ($terms_query->have_posts()) : $terms_query->the_post(); ?>
