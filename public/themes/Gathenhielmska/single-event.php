@@ -80,10 +80,30 @@ $date_string = strftime('%A %e %B', strtotime($date));
 </div>
 
 <!-- Gallery Section -->
-    <div class="gallery-container">
-        <h3>Bildgalleri</h3>
-        <div class=""></div>
-    </div>
+<div class="gallery-section">
+
+    <?php if( have_rows('images') ): ?>
+        <?php while( have_rows('images') ): the_row();
+
+$images = get_field('images');
+
+// Get sub field values.
+// $image1 = get_sub_field('image_1');
+// $image2 = get_sub_field('image_2');
+?>
+<h3>Bildgalleri</h3>
+        <div class="gallery-container">
+            <?php foreach ($images as $image) : ?>
+                <div class="gallery-images">
+                    <img src="<?php echo $image; ?>" alt="">
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <div class="scroll-highlight-container"></div>
+
+        <?php endwhile; ?>
+    <?php endif; ?>
+</div>
 
 </div> <!-- single-event-container -->
 <?php get_footer(); ?>

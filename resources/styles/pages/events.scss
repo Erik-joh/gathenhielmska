@@ -202,6 +202,27 @@
   }
 }
 
-.gallery-container {
-  padding: 0 20px 40px 20px;
+.gallery-section {
+
+  h3 {
+    padding: 0 20px;
+
+  }
+
+  .gallery-container {
+    @include snap-scroll-parent;
+    display: flex;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    // max-height: 250px;
+
+    .gallery-images {
+
+      img {
+        padding-right: 6px;
+        max-width: 335px;
+        @include snap-scroll-child;
+      }
+    }
+  }
 }
