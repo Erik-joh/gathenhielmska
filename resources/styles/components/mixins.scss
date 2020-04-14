@@ -23,3 +23,11 @@
 @mixin snap-scroll-child{
   scroll-snap-align: center;
 }
+@mixin menu-text-style{
+  font-family: $fontHeading;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 22px;
+  color: white;
+}
