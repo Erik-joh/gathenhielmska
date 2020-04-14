@@ -6,8 +6,8 @@
             <img src="<?php bloginfo('template_directory') ?>/assets/images/arrow-up.svg"></<img>
         </div>
 
-        <div>
-            <img class="footer-logo" src="<?php bloginfo('template_directory') ?>/assets/images/footer-logo-mobile.svg" alt="Gathenhielmska logotype">
+        <div class="">
+            <img class="footer-logo" src="<?php bloginfo('template_directory') ?>/assets/images/gathenhielmska-logo.svg" alt="Gathenhielmska logotype">
             <p>En grundtanke med verksamheten i Gathenhielmska Huset är att skapa processer som
                 uppmuntrar innovativa möten och samverkan mellan konstnärer, kulturutövare,
                 lokalt näringsliv och besökare.</p>

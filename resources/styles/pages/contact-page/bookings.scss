@@ -66,6 +66,11 @@
 form {
   margin: 0px !important;
   padding: 0px !important;
+  font-family: 'Lato', sans-serif;
+
+  .label-above .nf-field-label {
+    margin-bottom: 2px;
+  }
 
   label {
     color: #ffffff;
@@ -74,6 +79,7 @@ form {
 
   .nf-field {
     width: 100%;
+    padding: 3px 0;
   }
 
   .nf-field-container {
@@ -87,6 +93,32 @@ form {
     font-family: $fontHeading;
     width: 100%;
     height: 40px;
+  }
+
+  .nf-element {
+    padding: 2px 2px 2px 6px;
+  }
+
+  .ninja-forms-req-symbol {
+    color: white;
+  }
+
+  .nf-error-required-error {
+    color: white;
+    font-size: 12px;
+  }
+
+  .nf-error-field-errors {
+    color: white;
+    font-size: 16px;
+    // font-weight: 700;
+  }
+
+  .list-radio-wrap {
+
+    #nf-label-field-14 {
+      padding-bottom: 10px;
+    }
   }
 }
 
