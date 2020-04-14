@@ -16,28 +16,33 @@ $terms_query = new WP_Query(array(
         )
     )
 ));
+
+foreach ($terms as $category) {
+    var_dump($category->name);
+}
 ?>
 
 <?php if ($terms_query->have_posts()) : ?>
     <?php while ($terms_query->have_posts()) : $terms_query->the_post(); ?>
         <div class="event-container">
-                <a href="<?php echo get_permalink($post); ?>">
-                    <div class="event-cards">
-                        <?php if (has_post_thumbnail()) {
-                            the_post_thumbnail('medium');
-                        } ?>
-                        <div class="fields">
+            <a href="<?php echo get_permalink($post); ?>">
+                <div class="event-cards">
+                    <?php if (has_post_thumbnail()) {
+                        the_post_thumbnail('medium');
+                    } ?>
+                    <div class="fields">
                         <div class="cat-date-container">
-
                             <p class="event-date"><?php the_field('date'); ?></p>
                         </div>
                         <h3 class="event-title"><?php the_title(); ?></h3>
                         <p class="event-info"><?php the_field('short_description'); ?></p>
-                        </div>
                     </div>
-                </a>
+                </div>
+            </a>
         </div>
     <?php endwhile; ?>
+<?php else: ?>
+    <p>Det finns tyvärr inga evenemang i denna kategori ännu.</p>
 <?php endif; ?>
 
 <?php

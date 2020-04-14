@@ -13,18 +13,35 @@
 
 <?php
 $args = [
-    'numberposts' => 5,
+    'numberposts' => -1,
     'post_type' => 'event',
+    'meta_key' => 'date',
+    'orderby' => 'meta_value',
+    'order'	=> 'ASC'
 ];
-
 $events = get_posts($args);
+
+$terms = get_terms(array(
+    'taxonomy' => 'category',
+    'hide_empty' => false,
+));
 ?>
 
 <?php if (count($events)) : ?>
     <div class="event-container">
-        <div>
-            <?php wp_list_categories('feed_type'); ?>
+
+        <div class="category-list">
+            <ul>
+                <?php foreach ($terms as $term) : ?>
+                    <li>
+                        <a href="<?php echo get_term_link($term) ?> ">
+                            <?php echo get_field('title', $term)  ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
         </div>
+
         <?php foreach ($events as $post) : ?>
             <a href="<?php echo get_permalink($post); ?>">
                 <div class="event-cards">
