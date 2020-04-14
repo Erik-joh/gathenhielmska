@@ -39,7 +39,6 @@ function snapScroll() {
     }
     container.addEventListener("scroll", () => {
       scrollLeft = container.scrollLeft;
-      console.log(scrollLeft);
       for (let i = 0; i < scrollablePages; i++) {
         if (width * i - 50 < scrollLeft && width * (i + 1) - 50 > scrollLeft) {
           circles[i].classList.add("scroll-circle-highlighted");

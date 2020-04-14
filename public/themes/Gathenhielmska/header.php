@@ -11,26 +11,45 @@
 
 <body <?php body_class(); ?>>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="/"><?php bloginfo('name'); ?></a>
+        <nav class="header-navbar">
+            <div class="icon-container">
+                <img class="menu-search" src="<?php bloginfo('template_directory') ?>/assets/images/header/icon_search_menu.svg">
+                <a class="home-icon" href="/"><img class="menu-logo" src="<?php bloginfo('template_directory') ?>/assets/images/header/icon_logo_menu.svg" /></a>
 
-            <button class=" navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <ul class="navbar-nav mr-auto">
+                <input type="checkbox" class="toggler">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+            </div>
+            <div class="menu">
+                <h2>Meny</h2>
+                <div class="link-container">
                     <?php foreach (get_pages(['sort_column' => 'menu_order']) as $page) : ?>
-                        <li class="nav-item <?php if (is_page($page) || is_home() && $page->ID == get_option('page_for_posts')) {
-                                                echo 'active';
-                                            } ?>">
-                            <a class="nav-link" href="<?php echo get_permalink($page); ?>">
+                        <?php if ($page->post_title !== "Home") : ?>
+                            <a class="link-page" href="<?php echo get_permalink($page); ?>">
                                 <?php echo $page->post_title; ?>
-                            </a><!-- /nav-link -->
-                        </li><!-- /nav-item -->
+                            </a>
+                        <?php endif; ?>
                     <?php endforeach; ?>
-                </ul><!-- /navbar -->
-            </div><!-- /collapseasdfadsf -->
+                    <div class="language-header">
+                        <h3>Språk</h3>
+                        <img src="<?php bloginfo('template_directory') ?>/assets/images/news_arrow.png">
+                    </div>
+                    <div class="language-selector">
+                        <div>
+                            <h3>English</h3>
+                        </div>
+                        <div>
+                            <h3>German</h3>
+                        </div>
+                        <div>
+                            <h3>Spanish</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
         </nav>
 
     </header>
