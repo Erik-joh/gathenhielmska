@@ -34,14 +34,21 @@ $events = get_posts($args);
                     <div class="fields">
                         <div class="cat-date-container">
                             <?php $categories = get_the_terms($post, 'category');  ?>
+                            <?php
+                                setlocale(LC_TIME,'sv_SE');
+                                $date = get_field('date');
+                                $date_string = strftime('%A %e %B', strtotime($date));
+                                $currentDate = date("Y-m-d");
+                            ?>
                             <?php foreach ($categories as $category) : ?>
-                                <p class="event-date"><a href="<?php echo get_term_link($category) ?>"> <?php echo strtoupper($category->name) ?></a></p>
+                                <a href="<?php echo get_term_link($category) ?>"> <?php echo strtoupper($category->name) ?></a>
                             <?php endforeach; ?>
                             <p>|</p>
+                            <!-- <?php var_dump($currentDate) ?> -->
                             <p class="event-date"><?php the_field('date'); ?></p>
                         </div>
-                        <p class="event-title"><?php the_title(); ?></p>
-                        <p class="event-info"><?php the_field('description'); ?></p>
+                        <h3 class="event-title"><?php the_title(); ?></h3>
+                        <p class="event-info"><?php the_field('short_description'); ?></p>
                     </div>
                 </div>
             </a>

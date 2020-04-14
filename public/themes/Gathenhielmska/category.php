@@ -27,9 +27,12 @@ $terms_query = new WP_Query(array(
                             the_post_thumbnail('medium');
                         } ?>
                         <div class="fields">
+                        <div class="cat-date-container">
+
                             <p class="event-date"><?php the_field('date'); ?></p>
-                            <p class="event-title"><?php the_field('title'); ?></p>
-                            <p class="event-info"><?php the_field('description'); ?></p>
+                        </div>
+                        <h3 class="event-title"><?php the_title(); ?></h3>
+                        <p class="event-info"><?php the_field('short_description'); ?></p>
                         </div>
                     </div>
                 </a>
