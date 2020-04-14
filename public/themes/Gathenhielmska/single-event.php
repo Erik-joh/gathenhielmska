@@ -21,6 +21,7 @@ $date_string = strftime('%A %e %B', strtotime($date));
                     </div>
                 </div>
 
+            <div class="hej">
                 <div class="cat-date-container">
                     <?php $categories = get_the_terms($post, 'category');  ?>
 
@@ -31,15 +32,15 @@ $date_string = strftime('%A %e %B', strtotime($date));
                     <p class="event-date"><?php echo $date; ?></p>
                 </div>
 
-                <h1><?php the_title(); ?></h1>
+                <h1 class="title"><?php the_title(); ?></h1>
                 <p><?php the_field('short_description'); ?></p>
 
-                <h2><?php the_field('title_1'); ?></h2>
+                <h4><?php the_field('title_1'); ?></h4>
                 <p><?php the_field('text_1'); ?></p>
 
-                <h2><?php the_field('title_2'); ?></h2>
+                <h4><?php the_field('title_2'); ?></h4>
                 <p><?php the_field('text_2'); ?></p>
-
+            </div>
 
             <?php endwhile; ?>
         <?php endif; ?>
@@ -48,23 +49,39 @@ $date_string = strftime('%A %e %B', strtotime($date));
 <!-- Information Section -->
 <div class="event-info-container">
     <img class="info-top-img" src="<?php bloginfo('template_directory') ?>/assets/images/wave_news_top.png" />
-        <h1>Information om evenemanget</h1>
-        <ul>
-            <li><p class="event-date"><?php echo $date_string; ?></li>
-            <li><p class="event-date"><?php the_field('time_event_start'); ?>-<?php the_field('time_event_end'); ?></li>
-            <li><p class="event-date"><?php the_field('ticket_price'); ?></li>
-            <li><p class="event-date"><?php the_field('location') ?></li>
-        </ul>
-        <p><?php the_field('optional_info'); ?></p>
-        <div class="btn-container">
-            <button>Köp biljett</button>
+        <div class="event-info-wrapper">
+            <h3>Information om evenemanget</h3>
+            <ul>
+                <li>
+                    <img src="<?php bloginfo('template_directory') ?>/assets/images/icon_calender.svg">
+                    <p class="event-date"><?php echo $date_string; ?>
+                </li>
+                <li>
+                    <img src="<?php bloginfo('template_directory') ?>/assets/images/icon_clock.svg">
+                    <p class="event-date"><?php the_field('time_event_start'); ?>-<?php the_field('time_event_end'); ?>
+                </li>
+                <li>
+                    <img src="<?php bloginfo('template_directory') ?>/assets/images/icon_money.svg">
+                    <p class="event-date"><?php the_field('ticket_price'); ?>
+                </li>
+                <li>
+                    <img src="<?php bloginfo('template_directory') ?>/assets/images/icon_house.svg">
+                    <p class="event-date"><?php the_field('location') ?>
+                </li>
+            </ul>
+            <?php if (get_field('optional_info')): ?>
+                <p class="optional-info"><?php the_field('optional_info'); ?></p>
+            <?php endif; ?>
+            <div class="btn-container">
+                <a class="link-button" href="https://billetto.se/">Köp biljett</a>
+            </div>
         </div>
     <img class="info-bottom-img" src="<?php bloginfo('template_directory') ?>/assets/images/wave_news_bottom.png" />
 </div>
 
 <!-- Gallery Section -->
     <div class="gallery-container">
-        <h1>Bildgalleri</h1>
+        <h3>Bildgalleri</h3>
         <div class=""></div>
     </div>
 

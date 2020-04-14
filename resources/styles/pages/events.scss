@@ -52,18 +52,36 @@
     margin: 0;
   }
 
-  .event-title {
-    padding-bottom: 10px;
+
+  .cat-date-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     font-family: 'Lato', sans-serif;
-    font-style: normal;
-    font-size: 18px;
-    color: $darkBlue;
+    font-size: 12px;
+
+    a, a:visited {
+      font-weight: 700;
+      color: black;
+    }
+
+    p {
+      margin: 0;
+      padding: 0 5px;
+      font-family: 'Lato', sans-serif;
+      font-size: 12px;
+    }
+
+    .event-date {
+      padding: 0;
+    }
   }
 
-  .event-date {
-    font-family: 'Lato', sans-serif;
-    font-style: normal;
-    font-size: 12px;
+  .event-title {
+    padding-top: 8px;
+    padding-bottom: 18px;
+    color: $darkBlue;
+    margin: 0;
   }
 
   .event-info {
@@ -80,8 +98,9 @@
 .single-event-container {
   line-height: normal;
 
-  h1 {
-    font-size: 22px;
+  .title {
+    color: $darkBlue;
+    padding-top: 16px;
   }
 
   svg {
@@ -89,16 +108,33 @@
     margin: 0;
     padding: 0;
   }
+
+  .hej {
+    padding: 24px 20px 0 20px;
+  }
 }
 
 .cat-date-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+
+  a, a:visited {
+    font-weight: 700;
+    color: black;
+  }
 
   p {
     margin: 0;
     padding: 0 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+  }
+
+  .event-date {
+    padding: 0;
   }
 }
 
@@ -109,6 +145,14 @@
   margin: 0;
   padding: 0;
 
+  .event-info-wrapper {
+    padding: 0 20px;
+  }
+
+  p {
+    margin: 0;
+  }
+
   .info-top-img{
     padding-bottom: 40px;
     margin-top: -20px;
@@ -118,12 +162,46 @@
     margin-bottom: -20px
   }
 
+  ul {
+    padding: 0 0 40px 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 20px;
+
+    p {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    img {
+      padding-right: 8px;
+    }
+  }
+
+  .optional-info {
+    padding: 0 0 40px 0;
+  font-size: 16px;
+  line-height: 19px;
+  }
+
   .btn-container {
     display: flex;
     justify-content: center;
 
-    button {
+    .link-button {
+      @include link-button;
       width: 120px;
     }
   }
+}
+
+.gallery-container {
+  padding: 0 20px 40px 20px;
 }
