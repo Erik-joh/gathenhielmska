@@ -12,10 +12,12 @@ const NewsButton = () => {
         clicked = false;
         newsArticle.style.height = `${originalHeight}px`;
         content.style.display = "none";
+        newsArrow.classList.add("news-arrow-rotate");
       } else {
         content.style.display = "block";
         clicked = true;
         newsArticle.style.height = `${newsArticle.scrollHeight}px`;
+        newsArrow.classList.remove("news-arrow-rotate");
       }
     });
   });

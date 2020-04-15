@@ -32,18 +32,18 @@
                         <?php endif; ?>
                     <?php endforeach; ?>
                     <div class="language-header">
+                        <img class="language-icon" src="<?php bloginfo('template_directory') ?>/assets/images/header/language_icon.png">
                         <h3>Språk</h3>
-                        <img src="<?php bloginfo('template_directory') ?>/assets/images/news_arrow.png">
+                        <img src="<?php bloginfo('template_directory') ?>/assets/images/header/language_arrow.png">
                     </div>
                     <div class="language-selector">
                         <div>
+                            <img class="english-icon" src="<?php bloginfo('template_directory') ?>/assets/images/header/UK.png">
                             <h3>English</h3>
                         </div>
                         <div>
+                            <img class="german-icon" src="<?php bloginfo('template_directory') ?>/assets/images/header/germany.png">
                             <h3>German</h3>
-                        </div>
-                        <div>
-                            <h3>Spanish</h3>
                         </div>
                     </div>
 

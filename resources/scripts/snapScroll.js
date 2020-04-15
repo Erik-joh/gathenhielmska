@@ -4,7 +4,7 @@ function snapScroll() {
   const scrollCircleContainer = document.querySelector(
     ".scroll-highlight-container"
   );
-  if (container) {
+  if (container && window.innerWidth < 800) {
     const scrollablePages = scrollableItems.length / 2;
 
     let templist = [];

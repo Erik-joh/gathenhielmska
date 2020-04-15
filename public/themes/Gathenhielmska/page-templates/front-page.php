@@ -4,8 +4,13 @@
 <main class="front-page">
     <?php //$page = acf_get_field_group('group_5e85ba0a2d36e')
     ?>
-    <img class="hero-img" src="<?php the_field('hero_image') ?>" />
-    <h1><?php the_field('hero_title') ?></h1>
+    <div class="hero-img-container">
+        <img class="hero-img" src="<?php the_field('hero_image') ?>" />
+        <div class="hero-text-container">
+            <h1 class="hero-title"><?php the_field('hero_title') ?></h1>
+            <p class="hero-content"><?php the_field('hero_content') ?></p>
+        </div>
+    </div>
 
 
     <?php
@@ -27,7 +32,7 @@
                 <?php foreach ($events as $post) : ?>
                     <div class="front-event-cards">
                         <?php if (has_post_thumbnail()) {
-                            the_post_thumbnail([163, 190]);
+                            the_post_thumbnail();
                         } ?>
                         <div class="front-event-fields">
 
@@ -35,14 +40,14 @@
                             <a href="<?php echo get_permalink($post); ?>">
                                 <p class="front-event-title"><?php the_title(); ?></p>
                             </a>
-                            <p class="front-event-info"><?php the_field('description'); ?></p>
+
                         </div>
                     </div>
                 <?php endforeach; ?>
             </div>
             <div class="scroll-highlight-container"></div>
 
-            <a class="link-button" href="<?php echo get_permalink(get_page_by_title("evenemang")); ?>">Se fler evenemang</a>
+            <a class="link-button" href="<?php echo get_permalink(get_page_by_title("evenemang")); ?>">Se evenemang</a>
 
 
         </div>
@@ -60,34 +65,39 @@
     <div class="news-container">
         <img class="news-top-img" src="<?php bloginfo('template_directory') ?>/assets/images/wave_news_top.png" />
         <h2>Nyheter</h2>
-        <?php foreach ($latestPosts as $post) : setup_postdata($post);  ?>
+        <div class="news-article-container">
+            <?php foreach ($latestPosts as $post) : setup_postdata($post);  ?>
 
-            <div class="news-article">
-                <div class="news-article-top">
-                    <h4 class="news-title"><?php the_title(); ?></h4>
-                    <img class="news-arrow" src="<?php bloginfo('template_directory') ?>/assets/images/news_arrow.png" />
+                <div class="news-article">
+                    <div class="news-article-top">
+                        <h4 class="news-title"><?php the_title(); ?></h4>
+                        <img class="news-arrow" src="<?php bloginfo('template_directory') ?>/assets/images/news_arrow.png" />
+                    </div>
+                    <!-- <p class=" news-content"></p> -->
+                    <?php the_content(); ?>
                 </div>
-                <!-- <p class=" news-content"></p> -->
-                <?php the_content(); ?>
-            </div>
 
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
         <img class="news-bottom-img" src="<?php bloginfo('template_directory') ?>/assets/images/wave_news_bottom.png" />
     </div><!-- /row -->
 
 
     <div class="visit-us">
-        <h2>Vill du besöka oss?</h2>
-        <p>Vi på Gathenhielmska huset vill gärna öppna upp för er så mycket som möjligt, vi har guidade turer och flera olika evenemang där vi öppnar dörrarna för er!</p>
-        <br>
-        <p>Håll utkik på kommande evenemang här, på
-            <a> Facebook </a>
-            eller på
-            <a> Instagram </a>
-            för nästa tillfälle.
-        </p>
+        <div>
+            <h2>Vill du besöka oss?</h2>
+            <p>Vi på Gathenhielmska huset vill gärna öppna upp för er så mycket som möjligt, vi har guidade turer och flera olika evenemang där vi öppnar dörrarna för er!</p>
+            <br>
+            <p>Håll utkik på kommande evenemang här, på
+                <a> Facebook </a>
+                eller på
+                <a> Instagram </a>
+                för nästa tillfälle.
+            </p>
+            <a class="link-button-desktop" href="<?php echo get_permalink(get_page_by_title("evenemang")); ?>">Se evenemang</a>
+        </div>
         <img class="map" src="<?php bloginfo('template_directory') ?>/assets/images/map.png" />
-        <a class="link-button" href="<?php echo get_permalink(get_page_by_title("evenemang")); ?>">Se evenemang</a>
+        <a class="link-button-mobile" href="<?php echo get_permalink(get_page_by_title("evenemang")); ?>">Se evenemang</a>
     </div>
 
 
