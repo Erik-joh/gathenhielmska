@@ -27,30 +27,34 @@ $terms_query = new WP_Query(array(
 // }
 // ?>
 
-<h1><?php echo $name; ?></h1>
+<main class="category-page">
+    <div class="category-name">
+        <h4><?php echo $name; ?></h4>
+    </div>
 
-<?php if ($terms_query->have_posts()) : ?>
-    <?php while ($terms_query->have_posts()) : $terms_query->the_post(); ?>
-        <div class="event-container">
-            <a href="<?php echo get_permalink($post); ?>">
-                <div class="event-cards">
-                    <?php if (has_post_thumbnail()) {
-                        the_post_thumbnail('medium');
-                    } ?>
-                    <div class="fields">
-                        <div class="cat-date-container">
-                            <p class="event-date"><?php the_field('date'); ?></p>
+    <?php if ($terms_query->have_posts()) : ?>
+        <?php while ($terms_query->have_posts()) : $terms_query->the_post(); ?>
+            <div class="event-container">
+                <a href="<?php echo get_permalink($post); ?>">
+                    <div class="event-cards">
+                        <?php if (has_post_thumbnail()) {
+                            the_post_thumbnail('medium');
+                        } ?>
+                        <div class="fields">
+                            <div class="cat-date-container">
+                                <p class="event-date"><?php the_field('date'); ?></p>
+                            </div>
+                            <h3 class="event-title"><?php the_title(); ?></h3>
+                            <p class="event-info"><?php the_field('short_description'); ?></p>
                         </div>
-                        <h3 class="event-title"><?php the_title(); ?></h3>
-                        <p class="event-info"><?php the_field('short_description'); ?></p>
                     </div>
-                </div>
-            </a>
-        </div>
-    <?php endwhile; ?>
-<?php else: ?>
-    <p>Det finns tyvärr inga evenemang i denna kategori ännu.</p>
-<?php endif; ?>
+                </a>
+            </div>
+        <?php endwhile; ?>
+    <?php else: ?>
+        <p>Det finns tyvärr inga evenemang i denna kategori ännu.</p>
+    <?php endif; ?>
+</main>
 
 <?php
 $terms_query = null;
