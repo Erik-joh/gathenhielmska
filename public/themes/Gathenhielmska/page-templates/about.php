@@ -4,16 +4,16 @@
 <main class="about-page">
     <img class="hero-img" src="<?php the_field('hero_image') ?>" />
     <h1 class="hero-title"><?php the_field('hero_title') ?></h1>
+    <div class="paragraph-bird-container">
+        <div class="paragraph-container">
+            <h3><?php the_field('subheading_1') ?></h3>
+            <p><?php the_field('paragraph_1') ?></p>
+        </div>
 
-    <div class="paragraph-container">
-        <h3><?php the_field('subheading_1') ?></h3>
-        <p><?php the_field('paragraph_1') ?></p>
+        <div class="illustration-bird-flower">
+            <img src="<?php bloginfo('template_directory') ?>/assets/images/about-page/illustration_bird_flower.png" />
+        </div>
     </div>
-
-    <div class="illustration-bird-flower">
-        <img src="<?php bloginfo('template_directory') ?>/assets/images/about-page/illustration_bird_flower.png" />
-    </div>
-
     <div class="paragraph-container">
         <h3><?php the_field('subheading_2') ?></h3>
         <p><?php the_field('paragraph_2') ?></p>
@@ -43,7 +43,9 @@
                     <p><?php the_field('description') ?></p>
                 </div>
             <?php endforeach; ?>
-            <div class="timeline"></div>
+            <div class="timeline">
+                <div></div>
+            </div>
         </div>
         <img class="wave-bottom" src="<?php bloginfo('template_directory') ?>/assets/images/about-page/wave_timeline_bottom.png" />
     </div>
