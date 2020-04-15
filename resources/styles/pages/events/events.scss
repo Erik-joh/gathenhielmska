@@ -1,4 +1,6 @@
 @import "./single-event.scss";
+@import "./category.scss";
+
 
 .event-page {
   padding-top: 50px;
@@ -36,6 +38,7 @@
   align-items: center;
   justify-content: center;
   color: black;
+  padding-bottom: 50px;
 
   .filter-container {
 
@@ -75,14 +78,19 @@
     text-decoration: none;
   }
 
-  .event-cards {
+  .event-card {
     background-color: rgb(255, 255, 255);
     margin: 5px 5px 24px 5px;
     min-width: 300px;
     max-width: 300px;
+    min-height: 350px;
     display: flex;
     flex-direction: column;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+      box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.39);
+    }
   }
 
   .fields {
@@ -93,7 +101,6 @@
     margin: 0;
   }
 
-
   .cat-date-container {
     display: flex;
     justify-content: flex-start;
@@ -101,9 +108,10 @@
     font-family: 'Lato', sans-serif;
     font-size: 12px;
 
-    a, a:visited {
+    .event-category {
       font-weight: 700;
       color: black;
+      padding: 0;
     }
 
     p {
@@ -151,41 +159,24 @@
 }
 
 
-// --- Category.php ---
+@media only screen and (min-width: 800px) {
 
-.category-page {
-  padding-top: 52px;
+  .event-container {
+    padding-bottom: 150px;
 
-  .category-name {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .event-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0 150px;
 
-    h4 {
-      font-size: 14px;
-      color: #8D8D8D;
-      margin: 30px 0;
-      padding: 0 20px;
+      .event-card {
+        margin: 20px 20px;
+        min-height: 380px;
 
-      &:before,
-      &:after {
-        background-color: #8D8D8D;
-        content: "";
-        display: inline-block;
-        height: 1px;
-        position: relative;
-        vertical-align: middle;
-        width: 150%;
-      }
-
-      &:before {
-        right: 0.5em;
-        margin-left: -150%;
-      }
-
-      &:after {
-        left: 0.5em;
-        margin-right: -150%;
+        .event-title {
+          font-size: 22px;
+        }
       }
     }
   }
