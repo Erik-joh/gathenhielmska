@@ -24,6 +24,8 @@ require get_template_directory() . '/fields/contact.php';
 require get_template_directory() . '/fields/room.php';
 require get_template_directory() . '/fields/manager.php';
 require get_template_directory() . '/fields/category.php';
+require get_template_directory() . '/fields/gallery.php';
+require get_template_directory() . '/fields/event-page.php';
 
 require get_template_directory() . '/taxonomies/category.php';
 
