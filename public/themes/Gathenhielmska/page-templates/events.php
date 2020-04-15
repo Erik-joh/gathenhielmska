@@ -63,6 +63,9 @@ $terms = get_terms(array(
                             <p>|</p>
                             <!-- <?php var_dump($currentDate) ?> -->
                             <p class="event-date"><?php the_field('date'); ?></p>
+                            <?php if ( get_field('online_event') ) : ?>
+                                <div class="online-event"><p>Online</p></div>
+                            <?php endif; ?>
                         </div>
                         <h3 class="event-title"><?php the_title(); ?></h3>
                         <p class="event-info"><?php the_field('short_description'); ?></p>

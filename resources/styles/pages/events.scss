@@ -75,6 +75,22 @@
     .event-date {
       padding: 0;
     }
+
+    .online-event {
+      background:  #CD3824;
+      height: 24px;
+      align-self: flex-end;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      padding: 0 3px;
+
+      p {
+        color: white;
+        font-size: 12px;
+        // font-weight: 700;
+      }
+    }
   }
 
   .event-title {
@@ -136,6 +152,22 @@
   .event-date {
     padding: 0;
   }
+
+  .online-event {
+    background:  #CD3824;
+    height: 24px;
+    align-self: flex-end;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 3px;
+
+    p {
+      color: white;
+      font-size: 12px;
+      // font-weight: 700;
+    }
+  }
 }
 
 .event-info-container {
@@ -186,9 +218,12 @@
   }
 
   .optional-info {
+
     padding: 0 0 40px 0;
-  font-size: 16px;
-  line-height: 19px;
+    p {
+      font-size: 16px;
+      line-height: 19px;
+    }
   }
 
   .btn-container {

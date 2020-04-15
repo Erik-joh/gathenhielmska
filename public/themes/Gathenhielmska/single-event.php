@@ -30,6 +30,9 @@ $date_string = strftime('%A %e %B', strtotime($date));
                     <?php endforeach; ?>
                     <p>|</p>
                     <p class="event-date"><?php echo $date; ?></p>
+                    <?php if ( get_field('online_event') ) : ?>
+                        <div class="online-event"><p>Online</p></div>
+                    <?php endif; ?>
                 </div>
 
                 <h1 class="title"><?php the_title(); ?></h1>
@@ -54,26 +57,42 @@ $date_string = strftime('%A %e %B', strtotime($date));
             <ul>
                 <li>
                     <img src="<?php bloginfo('template_directory') ?>/assets/images/icon_calender.svg">
-                    <p class="event-date"><?php echo $date_string; ?>
+                    <p class="event-date"><?php echo $date_string; ?></p>
                 </li>
                 <li>
                     <img src="<?php bloginfo('template_directory') ?>/assets/images/icon_clock.svg">
-                    <p class="event-date"><?php the_field('time_event_start'); ?>-<?php the_field('time_event_end'); ?>
+                    <p class="event-date"><?php the_field('time_event_start'); ?>-<?php the_field('time_event_end'); ?></p>
                 </li>
                 <li>
                     <img src="<?php bloginfo('template_directory') ?>/assets/images/icon_money.svg">
-                    <p class="event-date"><?php the_field('ticket_price'); ?>
+                    <p class="event-date"><?php the_field('ticket_price'); ?></p>
                 </li>
                 <li>
                     <img src="<?php bloginfo('template_directory') ?>/assets/images/icon_house.svg">
-                    <p class="event-date"><?php the_field('location') ?>
+                    <?php if ( get_field('online_event') ) : ?>
+                        <p class="event-date">Livestream på Facebook</p>
+                    <?php else: ?>
+                        <p class="event-date"><?php the_field('location') ?></p>
+                    <?php endif; ?>
                 </li>
             </ul>
-            <?php if (get_field('optional_info')): ?>
-                <p class="optional-info"><?php the_field('optional_info'); ?></p>
-            <?php endif; ?>
+            <div class="optional-info">
+                <?php if ( get_field('online_event') ) : ?>
+                    <p>Gathenhielmska huset erbjuder livesändning av evenemang via Facebook och Youtube. Vi anordnar livestream och virtuella konserter direkt från Trädgården och Salongen.</p>
+                    <br><p>Ta del av kreativa möten hemifrån!</p>
+                    <br><p>Klicka på knappen för att se sändningen.</p>
+                <?php else: ?>
+                    <?php if (get_field('optional_info')): ?>
+                        <p><?php the_field('optional_info'); ?></p>
+                    <?php endif; ?>
+                <?php endif; ?>
+            </div>
             <div class="btn-container">
-                <a class="link-button" href="https://billetto.se/">Köp biljett</a>
+                <?php if ( get_field('online_event') ) : ?>
+                    <a class="link-button" href="https://www.facebook.com/">Till livestream</a>
+                <?php else: ?>
+                    <a class="link-button" href="https://billetto.se/">Köp biljett</a>
+                <?php endif; ?>
             </div>
         </div>
     <img class="info-bottom-img" src="<?php bloginfo('template_directory') ?>/assets/images/wave_news_bottom.png" />
