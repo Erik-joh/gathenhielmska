@@ -1,7 +1,55 @@
 .front-page{
-  .hero-img{
+  .hero-img-container{
+    height: 80vh;
+    overflow: hidden;
     width: 100%;
   }
+  .hero-text-container{
+    position: absolute;
+    top: 55vh;
+    margin-left: 20px;
+    width: 70vw;
+  }
+  .hero-title{
+    color: white;
+    font-size: 28px;
+  }
+  .hero-content{
+    color: white;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  @media only screen and (min-width: 800px) {
+
+    .hero-img-container{
+      height: 80vh;
+      width: 100%;
+      overflow: hidden;
+    }
+    .hero-img{
+      margin-top: -10%;
+      width: 100%;
+    }
+    .hero-text-container{
+      position: absolute;
+      top: 50vh;
+      margin-left: 147px;
+      width: 40vw;
+    }
+    .hero-title{
+      font-size: 36px;
+      margin-bottom: 10px;
+      margin-top: 0px;
+      margin-left: 0px;
+    }
+    .hero-content{
+      color: white;
+      font-size: 26px;
+      line-height: 31px;
+      letter-spacing: 0.03em;
+    }
+  }
+
   @import "./front-events.scss";
   @import "./news.scss";
   @import "./visit-us.scss";

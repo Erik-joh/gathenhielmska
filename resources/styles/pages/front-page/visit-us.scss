@@ -1,10 +1,42 @@
 .visit-us{
   display: flex;
   flex-direction: column;
-  margin: 0px 20px;
-  .link-button{
+  margin: 50px 20px;
+  .link-button-mobile{
     @include link-button;
     width: 138px;
     align-self: center;
+    margin: 40px 0px;
+  }
+  .link-button-desktop{
+    display: none;
+  }
+  img{
+    height: 176px;
+    width: 335px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .visit-us{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px 9.5%;
+    width: 83%;
+
+    div{
+      width: 35vw;
+    }
+    .link-button-desktop{
+      @include link-button;
+      width: 179px;
+      height: 46px;
+      font-size: 18px;
+      align-self: center;
+      margin: 40px 0px;
+    }
+    .link-button-mobile{
+      display: none;
+    }
   }
 }

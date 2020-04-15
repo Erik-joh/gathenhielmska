@@ -54,22 +54,38 @@
       .language-header{
         display: flex;
         align-items: center;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+        cursor: pointer;
         img{
           height: 10px;
           width: 15px;
           margin-left: 10px;
         }
+        .language-icon{
+          width: 15px;
+          height: 15px;
+          margin-left: 20px;
+        }
         h3{
           @include menu-text-style;
-          margin-left: 20px;
+          margin-left: 10px;
+          margin-bottom: 0px;
         }
       }
       .language-selector{
         display: none;
-        h3{
-          @include menu-text-style;
-          margin-left: 40px;
+        div{
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          img{
+            margin-left: 40px;
+          }
+          h3{
+            @include menu-text-style;
+            margin-left: 10px;
+            margin-bottom: 0px;
+          }
         }
       }
       .visible{
