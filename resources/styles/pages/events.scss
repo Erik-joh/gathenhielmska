@@ -1,23 +1,29 @@
+.event-page {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
 
-.hero {
+.hero-container {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  overflow: hidden;
   position: relative;
 
   .hero-img {
     width: 100%;
-    height: 30vh;
     object-fit: cover;
-    overflow: hidden;
-    z-index: 0;
   }
 
-  .page-title {
+  h1 {
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: #ffffff;
-    font-size: 28px;
+    font-weight: normal;
     z-index: 1;
+    bottom: 20px;
+    left: 20px;
+    margin: 0 auto;
   }
 }
 
@@ -113,6 +119,7 @@
 
 .single-event-container {
   line-height: normal;
+  padding-top: 52px;
 
   .title {
     color: $darkBlue;
@@ -257,6 +264,46 @@
         padding-right: 6px;
         max-width: 335px;
         @include snap-scroll-child;
+      }
+    }
+  }
+}
+
+// --- Category.php ---
+
+.category-page {
+  padding-top: 52px;
+
+  .category-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h4 {
+      font-size: 14px;
+      color: #8D8D8D;
+      margin: 30px 0;
+      padding: 0 20px;
+
+      &:before,
+      &:after {
+        background-color: #8D8D8D;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: middle;
+        width: 150%;
+      }
+
+      &:before {
+        right: 0.5em;
+        margin-left: -150%;
+      }
+
+      &:after {
+        left: 0.5em;
+        margin-right: -150%;
       }
     }
   }

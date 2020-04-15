@@ -10,7 +10,7 @@ $date_string = strftime('%A %e %B', strtotime($date));
 // $newDateFormat = $date->format('l j F');
 ?>
 
-<div class="single-event-container">
+<main class="single-event-container">
     <div class="">
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
@@ -124,5 +124,5 @@ $images = get_field('images');
     <?php endif; ?>
 </div>
 
-</div> <!-- single-event-container -->
+</main> <!-- single-event-container -->
 <?php get_footer(); ?>

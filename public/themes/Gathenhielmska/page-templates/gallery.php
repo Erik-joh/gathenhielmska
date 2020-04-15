@@ -1,6 +1,7 @@
 <?php /* Template Name: Gallery */ ?>
 
 <?php get_header(); ?>
+
 <main class="gallery-page">
     <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
@@ -20,4 +21,5 @@
         </div>
     </div>
 </main>
+
 <?php get_footer(); ?>

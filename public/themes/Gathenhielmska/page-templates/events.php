@@ -1,16 +1,5 @@
 <?php /* Template Name: Events */ ?>
 
-<?php get_header(); ?>
-
-<?php if (have_posts()) : ?>
-    <?php while (have_posts()) : the_post(); ?>
-        <div class="hero">
-            <div class="hero-img"><?php the_content(); ?></div>
-            <h1 class="page-title"><?php the_title(); ?></h1>
-        </div>
-    <?php endwhile; ?>
-<?php endif; ?>
-
 <?php
 $args = [
     'numberposts' => -1,
@@ -26,6 +15,14 @@ $terms = get_terms(array(
     'hide_empty' => false,
 ));
 ?>
+
+<?php get_header(); ?>
+
+<main class="event-page">
+    <div class="hero-container">
+        <img class="hero-img" src="<?php the_field('hero_image') ?>" />
+        <h1><?php the_field('hero_title') ?></h1>
+    </div>
 
 <?php if (count($events)) : ?>
     <div class="event-container">
@@ -76,4 +73,5 @@ $terms = get_terms(array(
     </div>
 <?php endif; ?>
 
+</main>
 <?php get_footer(); ?>
