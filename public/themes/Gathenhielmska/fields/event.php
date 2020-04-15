@@ -295,6 +295,25 @@ if( function_exists('acf_add_local_field_group') ):
                     ),
                 ),
             ),
+            array(
+                'key' => 'field_5e96d5db14f7b',
+                'label' => 'Online Event',
+                'name' => 'online_event',
+                'type' => 'true_false',
+                'instructions' => 'Will this event be available online as a livestream?',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'message' => '',
+                'default_value' => 0,
+                'ui' => 1,
+                'ui_on_text' => 'Yes',
+                'ui_off_text' => 'No',
+            ),
         ),
         'location' => array(
             array(
