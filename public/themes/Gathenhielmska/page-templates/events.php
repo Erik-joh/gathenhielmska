@@ -56,9 +56,10 @@ $terms = get_terms(array(
                 </select>
             </div>
 
+            <div class="event-cards">
             <?php foreach ($events as $post) : ?>
                 <a href="<?php echo get_permalink($post); ?>">
-                    <div class="event-cards">
+                    <div class="event-card">
                         <?php if (has_post_thumbnail()) {
                             the_post_thumbnail('medium');
                         } ?>
@@ -72,7 +73,7 @@ $terms = get_terms(array(
                                     $currentDate = date("Y-m-d");
                                 ?>
                                 <?php foreach ($categories as $category) : ?>
-                                    <a href="<?php echo get_term_link($category) ?>"> <?php echo strtoupper($category->name) ?></a>
+                                    <p class="event-category"> <?php echo strtoupper($category->name) ?></p>
                                 <?php endforeach; ?>
                                 <p>|</p>
                                 <!-- <?php var_dump($currentDate) ?> -->
@@ -90,6 +91,7 @@ $terms = get_terms(array(
         <?php else: ?>
             <p>Det finns tyvärr inga evenemang i denna kategori ännu.</p>
         <?php endif; ?>
+        </div>
     </div>
 
 </main>
