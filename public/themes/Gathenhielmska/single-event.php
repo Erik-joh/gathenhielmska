@@ -14,12 +14,10 @@ $date_string = strftime('%A %e %B', strtotime($date));
     <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
 
-            <div class="hero">
-                <div class="hero-img"><?php if (has_post_thumbnail()) {
-                            the_post_thumbnail('large');
-                        } ?>
-                </div>
-            </div>
+        <div class="hero-container">
+            <img class="hero-img" src="<?php the_field('hero_image') ?>" />
+            <button class="go-back"><img src="<?php bloginfo('template_directory') ?>/assets/images/go_back.png" alt=""></button>
+        </div>
 
             <div class="single-event-wrapper">
                 <div class="single-event-container">

@@ -60,17 +60,18 @@ $terms = get_terms(array(
             </div>
 
             <div class="event-cards">
-                <?php foreach ($events as $post) : ?>
-                    <a href="<?php echo get_permalink($post); ?>">
-                        <div class="event-card">
-                            <?php if (has_post_thumbnail()) {
-                                the_post_thumbnail('medium');
-                            } ?>
-                            <div class="fields">
-                                <div class="cat-date-container">
-                                    <?php $categories = get_the_terms($post, 'category');  ?>
-                                    <?php
-                                    setlocale(LC_TIME, 'sv_SE');
+            <?php foreach ($events as $post) : ?>
+                <a href="<?php echo get_permalink($post); ?>">
+                    <div class="event-card">
+                        <!-- <?php if (has_post_thumbnail()) {
+                            the_post_thumbnail('medium');
+                        } ?> -->
+                         <img class="hero-img" src="<?php the_field('hero_image') ?>" />
+                        <div class="fields">
+                            <div class="cat-date-container">
+                                <?php $categories = get_the_terms($post, 'category');  ?>
+                                <?php
+                                    setlocale(LC_TIME,'sv_SE');
                                     $date = get_field('date');
                                     $date_string = strftime('%A %e %B', strtotime($date));
                                     $currentDate = date("Y-m-d");
