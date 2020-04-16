@@ -2,8 +2,13 @@
 
 <?php get_header(); ?>
 <main class="about-page">
-    <img class="hero-img" src="<?php the_field('hero_image') ?>" />
+
+    <picture>
+        <source srcset="<?php the_field('hero_image_desktop') ?>" media="(min-width: 800px)" />
+        <img class="hero-img" src="<?php the_field('hero_image_mobile') ?>" loading="lazy" alt="">
+    </picture>
     <h1 class="hero-title"><?php the_field('hero_title') ?></h1>
+
     <div class="paragraph-bird-container">
         <div class="paragraph-container">
             <h3><?php the_field('subheading_1') ?></h3>
