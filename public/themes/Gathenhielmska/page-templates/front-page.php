@@ -5,7 +5,10 @@
     <?php //$page = acf_get_field_group('group_5e85ba0a2d36e')
     ?>
     <div class="hero-img-container">
-        <img class="hero-img" src="<?php the_field('hero_image') ?>" />
+        <picture>
+            <source srcset="<?php the_field('hero_image_desktop') ?>" media="(min-width: 800px)" />
+            <img class="hero-img" src="<?php the_field('hero_image_mobile') ?>" loading="lazy" alt="">
+        </picture>
         <div class="hero-text-container">
             <h1 class="hero-title"><?php the_field('hero_title') ?></h1>
             <p class="hero-content"><?php the_field('hero_content') ?></p>
