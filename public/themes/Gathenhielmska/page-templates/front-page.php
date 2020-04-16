@@ -67,7 +67,9 @@
     $latestPosts = get_posts($args);
     ?>
     <div class="news-container">
-        <img class="news-top-img" src="<?php bloginfo('template_directory') ?>/assets/images/wave_news_top.png" />
+        <div class="wave-container">
+            <img class="wave-top-img" src="<?php bloginfo('template_directory') ?>/assets/images/wave_news_top.png" />
+        </div>
         <h2>Nyheter</h2>
         <div class="news-article-container">
             <?php foreach ($latestPosts as $post) : setup_postdata($post);  ?>
@@ -83,7 +85,9 @@
 
             <?php endforeach; ?>
         </div>
-        <img class="news-bottom-img" src="<?php bloginfo('template_directory') ?>/assets/images/wave_news_bottom.png" />
+        <div class="wave-container">
+            <img class="wave-bottom-img" src="<?php bloginfo('template_directory') ?>/assets/images/wave_news_bottom.png" />
+        </div>
     </div><!-- /row -->
 
 
