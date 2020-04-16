@@ -112,16 +112,32 @@
       .link-container{
         width: 60%;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         .link-page{
-          margin-left: 20px;
+          margin-left: 15%;
           margin-bottom: 0px !important;
+        }
+        :first-child{
+          margin-left: 0px;
         }
         .language-header{
           margin-bottom: 0px;
+          position: fixed;
+          right: 30px;
+          h3{
+            display: none;
+          }
+          img{
+            display: none;
+          }
+          .language-icon{
+            display: block;
+          }
         }
-      }
+
+        }
+
       h2{
         display: none;
       }
@@ -134,7 +150,9 @@
         z-index: 6;
       }
       .menu-search{
-        right: 30px;
+        right: 100px;
+        width: 20px;
+        top: 16px;
         left: unset;
         z-index: 6;
       }

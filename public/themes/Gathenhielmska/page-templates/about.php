@@ -47,7 +47,7 @@
                     <h4><?php the_field('year') ?></h4>
                     <div class="year-line-left"></div>
                     <div class="year-line-right"></div>
-                    <p><?php the_field('description') ?></p>
+                    <h3><?php the_field('description') ?></h3>
                 </div>
             <?php endforeach; ?>
             <div class="timeline">
