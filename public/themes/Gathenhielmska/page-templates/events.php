@@ -4,7 +4,7 @@
 
 if ($_GET) {
     $hej = $_GET['category'];
-//    var_dump($hej);
+    //    var_dump($hej);
 } else {
     $hej = '';
 }
@@ -15,7 +15,7 @@ $args = [
     'cat' => $hej,
     'meta_key' => 'date',
     'orderby' => 'meta_value',
-    'order'	=> 'ASC'
+    'order'    => 'ASC'
 ];
 $events = get_posts($args);
 
@@ -30,7 +30,10 @@ $terms = get_terms(array(
 
 <main class="event-page">
     <div class="hero-container">
-        <img class="hero-img" src="<?php the_field('hero_image') ?>" />
+        <picture>
+            <source srcset="<?php the_field('hero_image_desktop') ?>" media="(min-width: 800px)" />
+            <img class="hero-img" src="<?php the_field('hero_image_mobile') ?>" loading="lazy" alt="">
+        </picture>
         <h1><?php the_field('hero_title') ?></h1>
     </div>
 
@@ -57,41 +60,43 @@ $terms = get_terms(array(
             </div>
 
             <div class="event-cards">
-            <?php foreach ($events as $post) : ?>
-                <a href="<?php echo get_permalink($post); ?>">
-                    <div class="event-card">
-                        <?php if (has_post_thumbnail()) {
-                            the_post_thumbnail('medium');
-                        } ?>
-                        <div class="fields">
-                            <div class="cat-date-container">
-                                <?php $categories = get_the_terms($post, 'category');  ?>
-                                <?php
-                                    setlocale(LC_TIME,'sv_SE');
+                <?php foreach ($events as $post) : ?>
+                    <a href="<?php echo get_permalink($post); ?>">
+                        <div class="event-card">
+                            <?php if (has_post_thumbnail()) {
+                                the_post_thumbnail('medium');
+                            } ?>
+                            <div class="fields">
+                                <div class="cat-date-container">
+                                    <?php $categories = get_the_terms($post, 'category');  ?>
+                                    <?php
+                                    setlocale(LC_TIME, 'sv_SE');
                                     $date = get_field('date');
                                     $date_string = strftime('%A %e %B', strtotime($date));
                                     $currentDate = date("Y-m-d");
-                                ?>
-                                <?php foreach ($categories as $category) : ?>
-                                    <p class="event-category"> <?php echo strtoupper($category->name) ?></p>
-                                <?php endforeach; ?>
-                                <p>|</p>
-                                <!-- <?php var_dump($currentDate) ?> -->
-                                <p class="event-date"><?php the_field('date'); ?></p>
-                                <?php if ( get_field('online_event') ) : ?>
-                                    <div class="online-event"><p>Online</p></div>
-                                <?php endif; ?>
+                                    ?>
+                                    <?php foreach ($categories as $category) : ?>
+                                        <p class="event-category"> <?php echo strtoupper($category->name) ?></p>
+                                    <?php endforeach; ?>
+                                    <p>|</p>
+                                    <!-- <?php var_dump($currentDate) ?> -->
+                                    <p class="event-date"><?php the_field('date'); ?></p>
+                                    <?php if (get_field('online_event')) : ?>
+                                        <div class="online-event">
+                                            <p>Online</p>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                                <h3 class="event-title"><?php the_title(); ?></h3>
+                                <p class="event-info"><?php the_field('short_description'); ?></p>
                             </div>
-                            <h3 class="event-title"><?php the_title(); ?></h3>
-                            <p class="event-info"><?php the_field('short_description'); ?></p>
                         </div>
-                    </div>
-                </a>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <p>Det finns tyvärr inga evenemang i denna kategori ännu.</p>
-        <?php endif; ?>
-        </div>
+                    </a>
+                <?php endforeach; ?>
+            <?php else : ?>
+                <p>Det finns tyvärr inga evenemang i denna kategori ännu.</p>
+            <?php endif; ?>
+            </div>
     </div>
 
 </main>

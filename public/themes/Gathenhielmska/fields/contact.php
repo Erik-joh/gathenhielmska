@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-if( function_exists('acf_add_local_field_group') ):
+if (function_exists('acf_add_local_field_group')) :
 
     acf_add_local_field_group(array(
         'key' => 'group_5e8719dd8b6cb',
         'title' => 'contact_page',
         'fields' => array(
             array(
-                'key' => 'field_5e871bc16201d',
-                'label' => 'Hero Image',
-                'name' => 'hero_image',
+                'key' => 'field_5e98112ihhs873',
+                'label' => 'Hero image desktop',
+                'name' => 'hero_image_desktop',
                 'type' => 'image',
-                'instructions' => 'Add a hero image.',
-                'required' => 1,
+                'instructions' => 'Top image on desktop please pick an image with Aspect ratio 16:6',
+                'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
                     'width' => '',
@@ -23,6 +23,30 @@ if( function_exists('acf_add_local_field_group') ):
                 ),
                 'return_format' => 'url',
                 'preview_size' => 'large',
+                'library' => 'all',
+                'min_width' => '',
+                'min_height' => '',
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => '',
+            ),
+            array(
+                'key' => 'field_5e8b20klo3rrfs',
+                'label' => 'Hero image mobile',
+                'name' => 'hero_image_mobile',
+                'type' => 'image',
+                'instructions' => 'Top image on mobile please pick an image with Aspect ratio 16:9',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'return_format' => 'url',
+                'preview_size' => 'medium',
                 'library' => 'all',
                 'min_width' => '',
                 'min_height' => '',
@@ -185,4 +209,4 @@ if( function_exists('acf_add_local_field_group') ):
         'description' => '',
     ));
 
-    endif;
+endif;

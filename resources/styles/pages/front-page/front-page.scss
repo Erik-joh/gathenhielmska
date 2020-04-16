@@ -1,12 +1,31 @@
 .front-page{
   .hero-img-container{
-    height: 80vh;
     overflow: hidden;
-    width: 100%;
+    object-fit: cover;
+    height: 80vh;
+
+
+    .hero-img{
+      transform-origin: 50% 50% 0;
+      object-position: center center;
+      width: 100%;
+      height: auto;
+
+    }
+    .hero-gradient{
+      position: absolute;
+      height: 80vh;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 90.28%);
+    }
   }
   .hero-text-container{
     position: absolute;
-    top: 55vh;
+    z-index: 3;
+    top: 50vh;
     margin-left: 20px;
     width: 70vw;
   }
@@ -22,17 +41,25 @@
   @media only screen and (min-width: 800px) {
 
     .hero-img-container{
-      height: 80vh;
+      height: 60vh;
       width: 100%;
       overflow: hidden;
+      .hero-gradient{
+        display: none;
+      }
+      .hero-img{
+        margin-top: 52px;
+        width: 100%;
+      }
     }
     .hero-img{
       margin-top: -10%;
       width: 100%;
     }
+
     .hero-text-container{
       position: absolute;
-      top: 50vh;
+      top: 30vh;
       margin-left: 147px;
       width: 40vw;
     }
