@@ -6,17 +6,17 @@
     color: $darkBlue;
   }
 
+  .gallery-information-container {
+    background: $lightPink;
+    margin-top: 20px;
+  }
+
   #sb_instagram {
     padding-bottom: 0px !important;
   }
 
-  .gallery-wave {
-    margin-bottom: -20px;
-  }
-
   .information-container {
-    background: $lightPink;
-    padding: 70px 20px 0 20px;
+    padding: 20px 20px 0 20px;
     display: flex;
     flex-direction: column;
 
@@ -40,29 +40,34 @@
 @media only screen and (min-width: 800px) {
 
   .gallery-page {
+
     h1 {
-      padding: 0 140px;
+      padding: 40px 140px 40px 140px;
       font-size: 40px;
     }
+
     .instagram-feed {
       padding: 0 140px;
     }
+
     .information-container {
-      padding: 160px 140px;
+      padding: 80px 140px 160px 140px;
       flex-direction: row;
       justify-content: space-between;
 
       .info-text-container {
         width: 55%;
-        // padding-left: 140px;
+
         h2 {
           font-size: 30px;
           padding-bottom: 3%;
         }
+
         p {
           font-size: 18px;
         }
       }
+
       .illustration-bird-container {
         padding-right: 40px;
         width: 35%;

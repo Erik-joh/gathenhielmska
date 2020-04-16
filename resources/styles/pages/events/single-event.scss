@@ -1,20 +1,18 @@
 .single-event-page {
   line-height: normal;
-  padding-top: 52px;
 
   .hero-container {
     width: 100%;
     height: 40vh;
     object-fit: cover;
-    // overflow: hidden;
-    // position: relative;
+    overflow: hidden;
 
     .hero-img {
-      // width: 100%;
       height: 100%;
       object-fit: cover;
       z-index: 0;
       position: absolute;
+      margin-top: 52px;
     }
 
     .go-back {
@@ -25,8 +23,8 @@
       height: 30px;
       padding: 0;
       display: block;
-      position: absolute;
-      top: 0;
+      position: fixed;
+      top: 51px;
     }
   }
 
@@ -155,7 +153,6 @@
       display: flex;
       padding-bottom: 40px;
       padding-left: 10px;
-      // max-height: 250px;
 
       .gallery-images {
         img {
@@ -174,85 +171,75 @@
   .single-event-page {
 
     .hero-container {
-      // width: 100%;
-      height: 60vh;
-      // object-fit: cover;
-      // object-position:  100% 100%;
-
-      overflow: hidden;
-      position: relative;
+      height: 80vh;
 
       .hero-img {
-        height: 100%;
-        // object-fit: cover;
         object-position: center center;
         // transform-origin: 50% 50%;
-        // transform-origin: 50% 50% 0;
       }
       .go-back {
         display: none;
       }
     }
 
-  .single-event-wrapper {
-    padding: 80px 140px;
-    display: flex;
-    justify-content: space-between;
+    .single-event-wrapper {
+      padding: 80px 140px;
+      display: flex;
+      justify-content: space-between;
 
-    .single-event-container {
-      width: 50%;
-      padding: 0;
+      .single-event-container {
+        width: 50%;
+        padding: 0;
 
-      .cat-date-container {
-        a, p {
+        .cat-date-container {
+          a, p {
+            font-size: 18px;
+          }
+        }
+
+        p, h4 {
           font-size: 18px;
+        }
+
+        h1.title {
+          font-size: 30px;
         }
       }
 
-      p, h4 {
-        font-size: 18px;
-      }
+      .event-info-container {
+        width: 40%;
+        padding: 40px 30px;
 
-      h1.title {
-        font-size: 30px;
+        .info-bottom-img, .info-top-img {
+          display: none;
+        }
+
+        .event-info-wrapper {
+          h3 {
+            font-size: 24px;
+          }
+
+          p {
+            font-size: 18px;
+            line-height: 22px;
+          }
+        }
       }
     }
 
-    .event-info-container {
-      width: 40%;
-      padding: 40px 30px;
+    .gallery-section {
+      padding: 0 140px;
 
-      .info-bottom-img, .info-top-img {
-        display: none;
-      }
+      .gallery-container {
 
-      .event-info-wrapper {
-        h3 {
-          font-size: 24px;
-        }
-
-        p {
-          font-size: 18px;
-          line-height: 22px;
+        .gallery-images {
+          img {
+            scroll-snap-align: auto;
+            min-width: 500px;
+            max-width: 575px;
+          }
         }
       }
     }
   }
-
-  .gallery-section {
-    padding: 0 140px;
-
-    .gallery-container {
-
-      .gallery-images {
-        img {
-          scroll-snap-align: auto;
-          // padding-right: 6px;
-          min-width: 500px;
-          max-width: 575px;
-        }
-      }
-    }
-  }
-}
 }
