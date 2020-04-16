@@ -22,3 +22,29 @@
     }
   }
 }
+
+@media only screen and (min-width: 800px) {
+
+  .contact-page {
+
+    .contact-information {
+      margin: 0 9.5%;
+      padding: 0;
+
+      .hero-title {
+        font-size: 30px;
+      }
+
+      h3, h4 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+    .contact-underline {
+      font-size: 18px;
+    }
+  }
+}
