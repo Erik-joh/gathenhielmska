@@ -13,12 +13,14 @@ html {
   scroll-behavior: smooth;
 }
 
+
 @import './components/variables.scss';
 @import './components/mixins.scss';
 @import './components/text.scss';
 @import './components/button.scss';
 @import './components/footer.scss';
 @import './components/menu.scss';
+@import './components/wave.scss';
 
 @import './pages/front-page/front-page.scss';
 @import './pages/events/events.scss';

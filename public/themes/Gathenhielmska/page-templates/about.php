@@ -27,7 +27,9 @@
 
     <img class="illustration-bird" src="<?php bloginfo('template_directory') ?>/assets/images/about-page/illustration_bird.png" />
     <div class="timeline-section">
-        <img class="wave-top" src="<?php bloginfo('template_directory') ?>/assets/images/about-page/wave_timeline_top.png" />
+        <div class="wave-container">
+            <img class="wave-top-img" src="<?php bloginfo('template_directory') ?>/assets/images/about-page/wave_timeline_top.png" />
+        </div>
         <h2>Historisk tidslinje</h2>
         <div class="timeline-container">
             <?php
@@ -52,7 +54,9 @@
                 <div></div>
             </div>
         </div>
-        <img class="wave-bottom" src="<?php bloginfo('template_directory') ?>/assets/images/about-page/wave_timeline_bottom.png" />
+        <div class="wave-container">
+            <img class="wave-bottom-img" src="<?php bloginfo('template_directory') ?>/assets/images/about-page/wave_timeline_bottom.png" />
+        </div>
     </div>
 
     <div class="occupations-container">
