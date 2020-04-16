@@ -46,13 +46,16 @@ $terms = get_terms(array(
                 <select class="select" id="year">
                     <option value="2020">2020</option>
                     <option value="2021">2021</option>
+                    <option value="2022">2022</option>
                 </select>
                 <select class="select" id="month">
-                    <option value="">April</option>
-                    <option value="">Juni</option>
+                    <option value="">APRIL</option>
+                    <option value="">MAJ</option>
+                    <option value="">JUNI</option>
+                    <option value="">JULI</option>
                 </select>
                 <select class="select" id="cat">
-                    <option value="">Kategori</option>
+                    <option value="">KATEGORI</option>
                     <?php foreach ($terms as $term) : ?>
                         <option value="<?php echo $term->term_id; ?>">
                             <?php echo get_field('title', $term)  ?>
@@ -79,7 +82,6 @@ $terms = get_terms(array(
                                     $currentDate = date("Y-m-d");
                                     ?>
                                     <?php foreach ($categories as $category) : ?>
-                                        <!-- <p class="event-category"> <?php echo strtoupper($category->name) ?></p> -->
                                         <p class="event-category"> <?php echo strtr(strtoupper($category->name), "åäö", "ÅÄÖ");  ?></p>
                                     <?php endforeach; ?>
                                     <p>|</p>

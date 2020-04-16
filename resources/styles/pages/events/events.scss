@@ -144,7 +144,6 @@
       p {
         color: white;
         font-size: 12px;
-        // font-weight: 700;
       }
     }
   }
@@ -165,7 +164,6 @@
   }
 }
 
-
 @media only screen and (min-width: 800px) {
 
   .event-container {
@@ -179,10 +177,11 @@
 
       .event-card {
         margin: 20px 20px;
-        min-height: 380px;
+        min-height: 400px;
 
         .event-title {
           font-size: 22px;
+          line-height: 29px;
         }
       }
     }

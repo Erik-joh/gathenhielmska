@@ -19,27 +19,31 @@
     <?php $args = ['post_type' => 'manager'];
     $managers = get_posts($args); ?>
     <?php if (count($managers)) : ?>
-        <div class="manager-container">
-            <h2>Ledningen</h2>
-            <?php foreach ($managers as $post) : ?>
-                <div class="managers">
-                    <img src="<?php the_field('profile_image'); ?>" alt="">
-                    <ul>
-                        <li class="name"><?php the_field('full_name'); ?></li>
-                        <li><?php the_field('role'); ?></li>
-                        <li><a class="contact-underline" href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a></li>
-                        <li><a class="contact-underline" href="tel:<?php the_field('phone_number'); ?>"><?php the_field('phone_number'); ?></a></li>
-                    </ul>
+        <div class="manager-wrapper">
+            <div class="wave-container">
+                    <img class="wave-top-img" src="<?php bloginfo('template_directory') ?>/assets/images/wave_news_bottom.png" />
                 </div>
-            <?php endforeach; ?>
+            <div class="manager-container">
+                <h2>Ledningen</h2>
+                <?php foreach ($managers as $post) : ?>
+                    <div class="managers">
+                        <img src="<?php the_field('profile_image'); ?>" alt="">
+                        <ul>
+                            <li class="name"><?php the_field('full_name'); ?></li>
+                            <li><?php the_field('role'); ?></li>
+                            <li><a class="contact-underline" href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a></li>
+                            <li><a class="contact-underline" href="tel:<?php the_field('phone_number'); ?>"><?php the_field('phone_number'); ?></a></li>
+                        </ul>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+
+                <img class="illustration-flower" src="<?php bloginfo('template_directory') ?>/assets/images/illustration_flower.png" alt="An illustration of a flower" />
+
         </div>
     <?php endif; ?>
 
-    <!-- <img class="illustration-flower" src="<?php bloginfo('template_directory') ?>/assets/images/illustration_flower.png" alt="An illustration of a flower" /> -->
     <div class="booking-section">
-        <!-- <div class="wave-container">
-            <img class="wave-top-img" src="<?php bloginfo('template_directory') ?>/assets/images/contact_wave.png" />
-        </div> -->
         <div class="bookings-container">
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>

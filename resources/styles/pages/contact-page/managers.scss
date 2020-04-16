@@ -1,6 +1,16 @@
-.manager-container {
+.manager-wrapper {
   background: $lightPink;
-  padding: 20px 20px 70px 20px;
+
+    .illustration-flower {
+      position: absolute;
+      right: 120px;
+      margin-top: -12%;
+      opacity: 0;
+    }
+}
+
+.manager-container {
+  padding: 0px 20px 70px 20px;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -32,7 +42,22 @@
 
 @media only screen and (min-width: 800px) {
 
+  .manager-wrapper {
+
+      .illustration-flower {
+        opacity: 1;
+      }
+  }
+
   .manager-container {
-    padding: 40px 9.5% 80px 9.5%;
+    padding: 10px 9.5% 80px 9.5%;
+
+    h2 {
+      font-size: 30px;
+    }
+
+    li {
+      font-size: 18px;
+    }
   }
 }
