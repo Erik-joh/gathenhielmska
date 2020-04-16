@@ -5,6 +5,7 @@
   font-weight: 400;
   font-size: 16px;
   color: #121212;
+  width: 100vw;
 
   .managers {
     margin: 20px 0;
@@ -26,5 +27,12 @@
     img {
       padding: 10px 20px 10px 10px;
     }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+
+  .manager-container {
+    padding: 40px 9.5% 80px 9.5%;
   }
 }

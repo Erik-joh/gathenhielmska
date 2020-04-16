@@ -35,26 +35,25 @@
         </div>
     <?php endif; ?>
 
-
-
+    <!-- <img class="illustration-flower" src="<?php bloginfo('template_directory') ?>/assets/images/illustration_flower.png" alt="An illustration of a flower" /> -->
     <div class="booking-section">
-        <img class="contact-wave" src="<?php bloginfo('template_directory') ?>/assets/images/contact_wave.png" />
-        <img class="illustration-flower" src="<?php bloginfo('template_directory') ?>/assets/images/illustration_flower.png" alt="An illustration of a flower" />
-
+        <!-- <div class="wave-container">
+            <img class="wave-top-img" src="<?php bloginfo('template_directory') ?>/assets/images/contact_wave.png" />
+        </div> -->
         <div class="bookings-container">
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
-                    <div>
+                    <div class="booking-information">
                         <h2><?php the_field('title_3'); ?></h2>
                         <p><?php the_field('text_3'); ?></p>
                     </div>
                 <?php endwhile; ?>
             <?php endif; ?>
-            <?php $args = ['post_type' => 'room', 'orderby' => 'date', 'order' => 'ASC'];
+            <?php $args = ['post_type' => 'room', 'numberposts' => -1, 'orderby' => 'date', 'order' => 'ASC'];
             $room = get_posts($args); ?>
             <?php if (count($room)) : ?>
+                <h3>Våra lokaler</h3>
                 <div class="room-container">
-                    <h3>Våra lokaler</h3>
                     <?php foreach ($room as $post) : ?>
                         <div class="room">
                             <h4><?php the_field('title'); ?></h4>

@@ -1,10 +1,20 @@
 .booking-section {
-  .contact-wave {
-    margin-top: -20px;
-    margin-bottom: -20px;
-    overflow: hidden;
-    width: 100vw;
-  }
+  // background-color: $darkBlue;
+  // margin-top: 20px;
+
+  // .wave-container{
+  //   .wave-top-img{
+  //     background: $lightPink;
+  //     padding-bottom: 0px;
+  //     margin-top: 0px;
+  //     margin-bottom: -60px;
+  //     // padding-top: 40px;
+  //     margin-left: -10px;
+  //     margin-right: -10px;
+  //     // z-index: 2;
+  //   }
+  // }
+
   .illustration-flower {
     width: 116px;
     float: right;
@@ -16,7 +26,8 @@
   color: #ffffff;
   padding: 50px 20px;
 
-  .room-container {
+  h3 {
+    margin: 0;
     padding-top: 30px;
   }
 
@@ -122,3 +133,71 @@ form {
   }
 }
 
+@media only screen and (min-width: 800px) {
+
+  .bookings-container {
+    padding: 130px 9.5% 160px 9.5%;
+
+    h3 {
+      padding-bottom: 38px;
+      padding-top: 50px;
+      font-size: 24px;
+    }
+
+    .booking-information {
+      width: 60%;
+
+      h2 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .room-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .room {
+      // max-width: 340px;
+      // min-width: 338px;
+      width: 330px;
+
+      p, h4 {
+        font-size: 18px;
+      }
+
+      .capacity {
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .contact-container {
+    padding-top: 32px;
+    width: 60%;
+
+    p {
+      margin: 0;
+      padding-bottom: 48px;
+    }
+
+    h3 {
+      margin: 0;
+      padding-bottom: 12px;
+    }
+  }
+
+  form {
+    #nf-field-12 {
+      width: 30%;
+      height: 40px;
+    }
+  }
+}
