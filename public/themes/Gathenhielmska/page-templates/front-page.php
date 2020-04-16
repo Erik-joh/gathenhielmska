@@ -9,6 +9,7 @@
             <source srcset="<?php the_field('hero_image_desktop') ?>" media="(min-width: 800px)" />
             <img class="hero-img" src="<?php the_field('hero_image_mobile') ?>" loading="lazy" alt="">
         </picture>
+        <div class="hero-gradient"></div>
         <div class="hero-text-container">
             <h1 class="hero-title"><?php the_field('hero_title') ?></h1>
             <p class="hero-content"><?php the_field('hero_content') ?></p>
