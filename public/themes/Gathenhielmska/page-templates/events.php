@@ -3,16 +3,18 @@
 <?php
 
 if ($_GET) {
-    $hej = $_GET['category'];
-    //    var_dump($hej);
+
+    $categoryId = $_GET['category'];
+
 } else {
-    $hej = '';
+
+    $categoryId = '';
 }
 
 $args = [
     'numberposts' => -1,
     'post_type' => 'event',
-    'cat' => $hej,
+    'cat' => $categoryId,
     'meta_key' => 'date',
     'orderby' => 'meta_value',
     'order'    => 'ASC'
@@ -77,7 +79,8 @@ $terms = get_terms(array(
                                     $currentDate = date("Y-m-d");
                                     ?>
                                     <?php foreach ($categories as $category) : ?>
-                                        <p class="event-category"> <?php echo strtoupper($category->name) ?></p>
+                                        <!-- <p class="event-category"> <?php echo strtoupper($category->name) ?></p> -->
+                                        <p class="event-category"> <?php echo strtr(strtoupper($category->name), "åäö", "ÅÄÖ");  ?></p>
                                     <?php endforeach; ?>
                                     <p>|</p>
                                     <!-- <?php var_dump($currentDate) ?> -->
