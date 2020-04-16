@@ -17,6 +17,8 @@
   .information-container {
     background: $lightPink;
     padding: 70px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
 
     a, a:visited {
       color: $darkBlue;
@@ -34,3 +36,42 @@
     }
   }
 }
+
+@media only screen and (min-width: 800px) {
+
+  .gallery-page {
+    h1 {
+      padding: 0 140px;
+      font-size: 40px;
+    }
+    .instagram-feed {
+      padding: 0 140px;
+    }
+    .information-container {
+      padding: 160px 140px;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .info-text-container {
+        width: 55%;
+        // padding-left: 140px;
+        h2 {
+          font-size: 30px;
+          padding-bottom: 3%;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+      .illustration-bird-container {
+        padding-right: 40px;
+        width: 35%;
+
+        img {
+          min-width: 230px;
+        }
+      }
+    }
+  }
+ }
+

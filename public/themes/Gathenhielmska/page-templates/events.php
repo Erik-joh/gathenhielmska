@@ -60,9 +60,10 @@ $terms = get_terms(array(
             <?php foreach ($events as $post) : ?>
                 <a href="<?php echo get_permalink($post); ?>">
                     <div class="event-card">
-                        <?php if (has_post_thumbnail()) {
+                        <!-- <?php if (has_post_thumbnail()) {
                             the_post_thumbnail('medium');
-                        } ?>
+                        } ?> -->
+                         <img class="hero-img" src="<?php the_field('hero_image') ?>" />
                         <div class="fields">
                             <div class="cat-date-container">
                                 <?php $categories = get_the_terms($post, 'category');  ?>
