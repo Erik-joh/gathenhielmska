@@ -1,6 +1,7 @@
 .timeline-section{
   background-color: $darkBlue;
   margin-top: 85px;
+  overflow: hidden;
 
 
   .wave-top{
@@ -36,7 +37,8 @@
     margin-left: 20px;
     margin-right: 10px;
     margin-top: 30px;
-    p{
+    h3{
+      font-size: 16px;
       width: 70%;
       color: white;
     }
@@ -80,4 +82,27 @@
       background-color: white;
     }
   }
+}
+@media only screen and (min-width: 800px) {
+  .timeline-section{
+    h2{
+      margin-left: 9.5%;
+      font-size: 30px;
+    }
+  }
+.timeline-container{
+  .year-container{
+    margin-left: 9.5%;
+    margin-right: 20%;
+    h3{
+      width: 60%;
+      color: white;
+
+      font-size: 18px;
+    }
+    h4{
+      font-size: 18px;
+    }
+  }
+}
 }

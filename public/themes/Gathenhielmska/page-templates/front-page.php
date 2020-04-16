@@ -30,19 +30,17 @@
 
     <?php if (count($events)) : ?>
         <div class="front-event-container">
-            <h2>Kommande evengemang</h2>
+            <h2>Kommande evenemang</h2>
 
             <div class="front-event-cards-container" id="scrollX">
                 <?php foreach ($events as $post) : ?>
                     <div class="front-event-cards">
-                        <?php if (has_post_thumbnail()) {
-                            the_post_thumbnail();
-                        } ?>
+                        <img class="front-hero-img" src="<?php the_field('hero_image') ?>" />
                         <div class="front-event-fields">
 
                             <p class="front-event-date"><?php the_field('date'); ?></p>
                             <a href="<?php echo get_permalink($post); ?>">
-                                <p class="front-event-title"><?php the_title(); ?></p>
+                                <h4 class="front-event-title"><?php the_title(); ?></h4>
                             </a>
 
                         </div>
